@@ -7,6 +7,9 @@ TagManager:
   - Sky
   - Player1
   - Player2
+  - Collectable
+  - RedHome
+  - BlueHome
   layers:
   - Default
   - TransparentFX
