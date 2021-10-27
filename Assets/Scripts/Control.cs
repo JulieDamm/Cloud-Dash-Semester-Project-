@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Control : MonoBehaviour
 {
@@ -19,10 +20,7 @@ public class Control : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-
-
     }
-
 
 
     // Update is called once per frame
@@ -86,10 +84,10 @@ public class Control : MonoBehaviour
     }
 
 
-
-
-   /* private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
+        
+        /*
         if (other.gameObject.CompareTag("PowerUP"))
         {
             other.gameObject.SetActive(false);
@@ -97,5 +95,7 @@ public class Control : MonoBehaviour
         // Indtil videre er der ingen reel PowerUP
         Debug.Log("TORNADO");
 
-    }*/
+        }*/
+    }
+
 }
