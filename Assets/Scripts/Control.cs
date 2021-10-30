@@ -9,6 +9,8 @@ public class Control : MonoBehaviour
 
     private Rigidbody rb;
 
+    Vector3 playerOriPos;
+
     public float dashspeed;
 
     public float CooldownTime = 5;
@@ -20,6 +22,8 @@ public class Control : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        playerOriPos = gameObject.transform.position;
     }
 
 
@@ -87,6 +91,10 @@ public class Control : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         
+        if (other.gameObject.tag == "Respawn")
+        {
+            gameObject.transform.position = playerOriPos;
+        }
         /*
         if (other.gameObject.CompareTag("PowerUP"))
         {
