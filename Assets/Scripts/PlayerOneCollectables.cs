@@ -7,6 +7,7 @@ public class PlayerOneCollectables : MonoBehaviour
 {
     public TextMeshProUGUI Player1Count;
     public TextMeshProUGUI Player1Total;
+    public TextMeshProUGUI Player1WinText;
 
     public int playerOneCount;
     private int playerOneCurrentCount;
@@ -34,6 +35,11 @@ public class PlayerOneCollectables : MonoBehaviour
         Player1Total.text = "Total: " + playerOneTotal.ToString();
     }
 
+    void SetPlayerOneWinText()
+    {
+        Player1WinText.text = "Player 1 Wins!";
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -51,6 +57,11 @@ public class PlayerOneCollectables : MonoBehaviour
 
             SetPlayerOneCountText();
             SetPlayerOneTotalText();
+
+            if (playerOneTotal == 10)
+            {
+                SetPlayerOneWinText();
+            }
         }
     }
 
