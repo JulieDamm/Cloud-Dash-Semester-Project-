@@ -9,7 +9,7 @@ public class PlayerOneCollectables : MonoBehaviour
     public TextMeshProUGUI Player1Total;
 
     public int playerOneCount;
-    private int playerOneCurrentCount;
+    public int playerOneCurrentCount;
     public int playerOneTotal;
 
     public Collider CoinCollider;
@@ -24,7 +24,7 @@ public class PlayerOneCollectables : MonoBehaviour
         SetPlayerOneTotalText();
     }
 
-    void SetPlayerOneCountText()
+    public void SetPlayerOneCountText()
     {
         Player1Count.text = "Carrying: " + playerOneCount.ToString();
     }

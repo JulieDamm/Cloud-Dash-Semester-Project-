@@ -17,6 +17,8 @@ public class Control : MonoBehaviour
 
     public float NextFireTime = 0;
 
+   
+
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +26,9 @@ public class Control : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         playerOriPos = gameObject.transform.position;
+
+        
+
     }
 
 
@@ -94,6 +99,22 @@ public class Control : MonoBehaviour
         if (other.gameObject.tag == "Respawn")
         {
             gameObject.transform.position = playerOriPos;
+
+            if (gameObject.tag == "Player1")
+            {
+                PlayerOneCollectables playonecollect = GetComponent<PlayerOneCollectables>();
+                playonecollect.playerOneCount = 0;
+                playonecollect.playerOneCurrentCount = 0;
+                playonecollect.SetPlayerOneCountText();
+            }
+
+            if (gameObject.tag == "Player2")
+            {
+                PlayerTwoCollectables playtwocollect = GetComponent<PlayerTwoCollectables>();
+                playtwocollect.playerTwoCount = 0;
+                playtwocollect.playerTwoCurrentCount = 0;
+                playtwocollect.SetPlayerTwoCountText();
+            }
         }
         /*
         if (other.gameObject.CompareTag("PowerUP"))
