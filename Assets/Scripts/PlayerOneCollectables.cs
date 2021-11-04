@@ -91,5 +91,11 @@ public class PlayerOneCollectables : MonoBehaviour
                 other.gameObject.GetComponent<SphereCollider>().enabled = true;
             }
         }
+
+        if (other.gameObject.CompareTag("Respawn"))
+        {
+            playerOneCount = 0;
+            playerOneCurrentCount = 0;
+        }
     }
 }
