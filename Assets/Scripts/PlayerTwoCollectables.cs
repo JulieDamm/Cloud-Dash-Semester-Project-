@@ -12,6 +12,7 @@ public class PlayerTwoCollectables : MonoBehaviour
     public int playerTwoCount;
     private int playerTwoCurrentCount;
     public int playerTwoTotal;
+    public bool gameWon;
 
     public Collider CoinCollider;
 
@@ -23,6 +24,8 @@ public class PlayerTwoCollectables : MonoBehaviour
 
         SetPlayerTwoCountText();
         SetPlayerTwoTotalText();
+
+        gameWon = false;
     }
 
     void SetPlayerTwoCountText()
@@ -58,9 +61,12 @@ public class PlayerTwoCollectables : MonoBehaviour
             SetPlayerTwoCountText();
             SetPlayerTwoTotalText();
 
-            if (playerTwoTotal == 10)
+            if (playerTwoTotal >= 10)
             {
                 SetPlayerTwoWinText();
+                GetComponent<Control>().enabled = false;
+                GameObject.Find("Player1").GetComponent<Control>().enabled = false;
+                gameWon = true;
             }
         }
     }
@@ -71,7 +77,7 @@ public class PlayerTwoCollectables : MonoBehaviour
         {
             if (playerTwoCount <= 4)
             {
-                other.gameObject.SetActive(false);
+                Destroy(other.gameObject);
                 playerTwoCount = playerTwoCount + 1;
                 playerTwoCurrentCount = playerTwoCount;
 
