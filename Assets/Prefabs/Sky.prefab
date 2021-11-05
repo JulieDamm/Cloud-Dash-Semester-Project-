@@ -110,8 +110,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Synlig: {fileID: 2709701777240306830}
-  platRes: 1
-  platFall: 0.5
+  platRes: 0.5
+  platFall: 2
 --- !u!54 &-1350882333597520622
 Rigidbody:
   m_ObjectHideFlags: 0

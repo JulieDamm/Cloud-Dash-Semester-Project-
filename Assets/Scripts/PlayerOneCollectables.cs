@@ -10,7 +10,7 @@ public class PlayerOneCollectables : MonoBehaviour
     public TextMeshProUGUI Player1WinText;
 
     public int playerOneCount;
-    private int playerOneCurrentCount;
+    public int playerOneCurrentCount;
     public int playerOneTotal;
     public bool gameWon;
 
@@ -28,7 +28,7 @@ public class PlayerOneCollectables : MonoBehaviour
         gameWon = false;
     }
 
-    void SetPlayerOneCountText()
+    public void SetPlayerOneCountText()
     {
         Player1Count.text = "Carrying: " + playerOneCount.ToString();
     }
