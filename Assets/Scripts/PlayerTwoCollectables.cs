@@ -7,10 +7,12 @@ public class PlayerTwoCollectables : MonoBehaviour
 {
     public TextMeshProUGUI Player2Count;
     public TextMeshProUGUI Player2Total;
+    public TextMeshProUGUI Player2WinText;
 
     public int playerTwoCount;
     public int playerTwoCurrentCount;
     public int playerTwoTotal;
+    public bool gameWon;
 
     public Collider CoinCollider;
 
@@ -22,6 +24,8 @@ public class PlayerTwoCollectables : MonoBehaviour
 
         SetPlayerTwoCountText();
         SetPlayerTwoTotalText();
+
+        gameWon = false;
     }
 
     public void SetPlayerTwoCountText()
@@ -32,6 +36,11 @@ public class PlayerTwoCollectables : MonoBehaviour
     void SetPlayerTwoTotalText()
     {
         Player2Total.text = "Total: " + playerTwoTotal.ToString();
+    }
+
+    void SetPlayerTwoWinText()
+    {
+        Player2WinText.text = "Player 2 Wins!";
     }
 
     // Update is called once per frame
@@ -51,6 +60,14 @@ public class PlayerTwoCollectables : MonoBehaviour
 
             SetPlayerTwoCountText();
             SetPlayerTwoTotalText();
+
+            if (playerTwoTotal >= 10)
+            {
+                SetPlayerTwoWinText();
+                GetComponent<Control>().enabled = false;
+                GameObject.Find("Player1").GetComponent<Control>().enabled = false;
+                gameWon = true;
+            }
         }
     }
 
@@ -60,7 +77,7 @@ public class PlayerTwoCollectables : MonoBehaviour
         {
             if (playerTwoCount <= 4)
             {
-                other.gameObject.SetActive(false);
+                Destroy(other.gameObject);
                 playerTwoCount = playerTwoCount + 1;
                 playerTwoCurrentCount = playerTwoCount;
 
@@ -73,6 +90,12 @@ public class PlayerTwoCollectables : MonoBehaviour
 
                 other.gameObject.GetComponent<SphereCollider>().enabled = true;
             }
+        }
+
+        if (other.gameObject.CompareTag("Respawn"))
+        {
+            playerTwoCount = 0;
+            playerTwoCurrentCount = 0;
         }
     }
 }
