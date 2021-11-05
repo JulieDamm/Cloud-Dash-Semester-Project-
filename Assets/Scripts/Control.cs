@@ -100,21 +100,7 @@ public class Control : MonoBehaviour
         {
             gameObject.transform.position = playerOriPos;
 
-            if (gameObject.tag == "Player1")
-            {
-                PlayerOneCollectables playonecollect = GetComponent<PlayerOneCollectables>();
-                playonecollect.playerOneCount = 0;
-                playonecollect.playerOneCurrentCount = 0;
-                playonecollect.SetPlayerOneCountText();
-            }
-
-            if (gameObject.tag == "Player2")
-            {
-                PlayerTwoCollectables playtwocollect = GetComponent<PlayerTwoCollectables>();
-                playtwocollect.playerTwoCount = 0;
-                playtwocollect.playerTwoCurrentCount = 0;
-                playtwocollect.SetPlayerTwoCountText();
-            }
+         
         }
         /*
         if (other.gameObject.CompareTag("PowerUP"))
