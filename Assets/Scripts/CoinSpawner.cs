@@ -8,25 +8,49 @@ public class CoinSpawner : MonoBehaviour
     public float spawnTime = 1.0f;          // How long between each spawn.
     public Transform[] SpawnLocations;      // An array of spawn points the coin can spawn.
 
+    private List<Transform> possiblelocations;
+
     public PlayerOneCollectables pO;
     public PlayerTwoCollectables pT;
 
     // Start is called before the first frame update
     void Start()
     {
+        possiblelocations = new List<Transform>();
+        RepopulatePossibleLocations();
+
         /* Run the Spawn function after a delay of the spawnTime and then
            continue to run it after the  same amount of time. */
         InvokeRepeating("Spawn", spawnTime, spawnTime);
     }
 
+    private void RepopulatePossibleLocations()
+    {
+        for (int i = 0; i < SpawnLocations.Length; i++)
+        {
+            possiblelocations.Add(SpawnLocations[i]);
+        }
+
+    }
+
     void Spawn()
     {
-        // Find a random index between zero and one less than the number of spawn points.
-        int spawnPointIndex = Random.Range(0, SpawnLocations.Length);
+        if (possiblelocations.Count > 0)
+        {
+            // Find a random index between zero and one less than the number of spawn points.
+            int spawnPointIndex = Random.Range(0, possiblelocations.Count);
 
-        /* Create an instance of the coin prefab at the randomly selected spawn point's
-        position and rotation. */
-        Instantiate(Coin, SpawnLocations[spawnPointIndex].position, SpawnLocations[spawnPointIndex].rotation);
+            /* Create an instance of the coin prefab at the randomly selected spawn point's
+            position and rotation. */
+
+            Instantiate(Coin, possiblelocations[spawnPointIndex].position, possiblelocations[spawnPointIndex].rotation);
+
+            possiblelocations.RemoveAt(spawnPointIndex);
+        }
+        else
+        {
+            RepopulatePossibleLocations();
+        }
 
         if (pO.gameWon)
         {
@@ -37,7 +61,5 @@ public class CoinSpawner : MonoBehaviour
         {
             CancelInvoke("Spawn");
         }
-
     }
-
 }
