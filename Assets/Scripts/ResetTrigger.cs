@@ -7,6 +7,9 @@ public class ResetTrigger : MonoBehaviour
 
     Vector3 originalPos;
     private Rigidbody rbp;
+    public Material rød;
+    public Material blå;
+    public Material originalmat;
 
     public Renderer Synlig;
     public float platRes = 1.0f;
@@ -19,6 +22,7 @@ public class ResetTrigger : MonoBehaviour
         originalPos = gameObject.transform.position;
 
         rbp = GetComponent<Rigidbody>();
+        
     }
 
     // Update is called once per frame
@@ -33,10 +37,12 @@ public class ResetTrigger : MonoBehaviour
         if(collision.gameObject.tag == "Player1")
         {
             StartCoroutine(Fall());
+            GetComponent<Renderer>().material = rød;
         }
         if (collision.gameObject.tag == "Player2")
         {
             StartCoroutine(Fall());
+            GetComponent<Renderer>().material = blå;
         }
     }
 
@@ -62,6 +68,7 @@ public class ResetTrigger : MonoBehaviour
         Synlig.enabled = false;
         yield return new WaitForSeconds(platRes);
         gameObject.transform.position = originalPos;
+        GetComponent<Renderer>().material = originalmat;
         Synlig.enabled = true;
         rbp.isKinematic = true;
     }

@@ -5546,6 +5546,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e75c97f5b9b0ed42bf7ede6c9830d2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  "r\xF8d": {fileID: 0}
+  "bl\xE5": {fileID: 0}
+  originalmat: {fileID: 0}
   Synlig: {fileID: 0}
   platRes: 0.5
   platFall: 1
