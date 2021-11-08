@@ -7,8 +7,8 @@ public class ResetTrigger : MonoBehaviour
 
     Vector3 originalPos;
     private Rigidbody rbp;
-    public Material rød;
-    public Material blå;
+    public Material red;
+    public Material blue;
     public Material originalmat;
 
     public Renderer Synlig;
@@ -18,7 +18,7 @@ public class ResetTrigger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Vi gemmer platformens nuværende position ved start af banen.
+        // Vi gemmer platformens nuv?rende position ved start af banen.
         originalPos = gameObject.transform.position;
 
         rbp = GetComponent<Rigidbody>();
@@ -31,29 +31,29 @@ public class ResetTrigger : MonoBehaviour
         
     }
 
-    //Når en "Player" rammer objektet starter Fall funktionen
+    //N?r en "Player" rammer objektet starter Fall funktionen
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag == "Player1")
         {
             StartCoroutine(Fall());
-            GetComponent<Renderer>().material = rød;
+            GetComponent<Renderer>().material = red;
         }
         if (collision.gameObject.tag == "Player2")
         {
             StartCoroutine(Fall());
-            GetComponent<Renderer>().material = blå;
+            GetComponent<Renderer>().material = blue;
         }
     }
 
-    //Fall afventer i sekunder og derefter slår kinematik fra. 
+    //Fall afventer i sekunder og derefter sl?r kinematik fra. 
     IEnumerator Fall()
     {
         yield return new WaitForSeconds(platFall);
         rbp.isKinematic = false;
     }
 
-    //Når vores platform rammer en collider med tag "Respawn" så starter Platformres funktionen.
+    //N?r vores platform rammer en collider med tag "Respawn" s? starter Platformres funktionen.
     void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Respawn")
@@ -62,7 +62,7 @@ public class ResetTrigger : MonoBehaviour
         }
     }
 
-    //Funktionen slår Mesh fra -> venter sekunder -> sætter platformens position til dens start position -> slår Mesh til igen -> Sætter Rigidbody Kinematic til. 
+    //Funktionen sl?r Mesh fra -> venter sekunder -> s?tter platformens position til dens start position -> sl?r Mesh til igen -> S?tter Rigidbody Kinematic til. 
     IEnumerator PlatformRes()
     {
         Synlig.enabled = false;
