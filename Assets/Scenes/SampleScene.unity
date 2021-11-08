@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.5748171, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2459,6 +2459,18 @@ PrefabInstance:
     - target: {fileID: 1457218482950188031, guid: 72c3b9b98649077448242b5adae099e8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786253585750956279, guid: 72c3b9b98649077448242b5adae099e8, type: 3}
+      propertyPath: JumpForce
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786253585750956279, guid: 72c3b9b98649077448242b5adae099e8, type: 3}
+      propertyPath: dashspeed
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786253585750956279, guid: 72c3b9b98649077448242b5adae099e8, type: 3}
+      propertyPath: pushspeed
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72c3b9b98649077448242b5adae099e8, type: 3}
@@ -5534,6 +5546,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e75c97f5b9b0ed42bf7ede6c9830d2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  "r\xF8d": {fileID: 0}
+  "bl\xE5": {fileID: 0}
+  originalmat: {fileID: 0}
   Synlig: {fileID: 0}
   platRes: 0.5
   platFall: 1
@@ -6183,6 +6198,18 @@ PrefabInstance:
       propertyPath: Player1WinText
       value: 
       objectReference: {fileID: 261114611}
+    - target: {fileID: 88447127684514637, guid: 3c80bc961aeff8640bbcb5f6a52a74aa, type: 3}
+      propertyPath: JumpForce
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 88447127684514637, guid: 3c80bc961aeff8640bbcb5f6a52a74aa, type: 3}
+      propertyPath: dashspeed
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 88447127684514637, guid: 3c80bc961aeff8640bbcb5f6a52a74aa, type: 3}
+      propertyPath: pushspeed
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 88447127684514637, guid: 3c80bc961aeff8640bbcb5f6a52a74aa, type: 3}
       propertyPath: dashspeed
       value: 25
