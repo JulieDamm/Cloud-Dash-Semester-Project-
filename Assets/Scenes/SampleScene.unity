@@ -6199,10 +6199,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 261114611}
     - target: {fileID: 88447127684514637, guid: 3c80bc961aeff8640bbcb5f6a52a74aa, type: 3}
+<<<<<<< HEAD
       propertyPath: JumpForce
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 88447127684514637, guid: 3c80bc961aeff8640bbcb5f6a52a74aa, type: 3}
+=======
+>>>>>>> master
       propertyPath: dashspeed
       value: 25
       objectReference: {fileID: 0}
