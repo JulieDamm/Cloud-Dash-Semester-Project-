@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 5964087685261689542}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.78, y: 3.2, z: 2.91}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -128,9 +128,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.55
-  dashspeed: 0
+  dashspeed: 25
+  pushspeed: 50
   CooldownTime: 5
   NextFireTime: 0
+  RandomSkill: 0
+  Jump: {x: 0, y: 0, z: 0}
+  JumpForce: 15
 --- !u!136 &208867943
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -159,6 +163,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player1Count: {fileID: 0}
   Player1Total: {fileID: 0}
+  Player1WinText: {fileID: 0}
   playerOneCount: 0
   playerOneTotal: 0
+  gameWon: 0
   CoinCollider: {fileID: 0}
+  RedTornado: {fileID: 1015819239409538942, guid: ff5f1c81333b1475bbfbfef8a085e562, type: 3}
+  RedTornadoClone: {fileID: 0}
+  RedTornadoSpawnPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Lock: {fileID: 1433806495201752334, guid: bdaac601cc90941e28ad0f61ae8bc1f2, type: 3}
+  LockClone: {fileID: 0}
+  IceBlue: {fileID: 2100000, guid: e4e329cdf385f4585ab0fee6ea291cf5, type: 2}
+  origmat: {fileID: 2100000, guid: f354a42db5c061d44801a216dfb0c5e6, type: 2}

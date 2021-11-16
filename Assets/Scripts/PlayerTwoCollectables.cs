@@ -10,11 +10,19 @@ public class PlayerTwoCollectables : MonoBehaviour
     public TextMeshProUGUI Player2WinText;
 
     public int playerTwoCount;
-    public int playerTwoCurrentCount;
+    private int playerTwoCurrentCount;
     public int playerTwoTotal;
     public bool gameWon;
 
     public Collider CoinCollider;
+
+    public GameObject BlueTornado;
+    public GameObject BlueTornadoClone;
+    public Transform[] BlueTornadoSpawnPoints;
+    public GameObject Lock;
+    public GameObject LockClone;
+    public Material IceBlue;
+    public Material origmat;
 
     // Start is called before the first frame update
     void Start()
@@ -97,5 +105,31 @@ public class PlayerTwoCollectables : MonoBehaviour
             playerTwoCount = 0;
             playerTwoCurrentCount = 0;
         }
+
+        if (other.gameObject.CompareTag("TornadoPowerUp"))
+        {
+            Destroy(other.gameObject);
+            int blueTornadoSpawnPointIndex = Random.Range(0, BlueTornadoSpawnPoints.Length);
+            BlueTornadoClone = Instantiate(BlueTornado, BlueTornadoSpawnPoints[blueTornadoSpawnPointIndex].position, Quaternion.identity);
+        }
+
+        if (other.gameObject.CompareTag("LockPowerUp"))
+        {
+            Destroy(other.gameObject);
+            LockClone = Instantiate(Lock, new Vector3(12.5f, 0.7f, 0f), Quaternion.identity);
+        }
+
+        if (other.gameObject.CompareTag("IcePowerUp"))
+        {
+            Destroy(other.gameObject);
+            GameObject.Find("Player1").GetComponent<Renderer>().material = IceBlue;
+            StartCoroutine(Defrost());
+        }
+    }
+
+    IEnumerator Defrost()
+    {
+        yield return new WaitForSeconds(5f);
+        GameObject.Find("Player1").GetComponent<Renderer>().material = origmat;
     }
 }

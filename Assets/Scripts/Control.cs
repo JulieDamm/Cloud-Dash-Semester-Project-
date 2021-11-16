@@ -182,18 +182,7 @@ public class Control : MonoBehaviour
         if (other.gameObject.tag == "Respawn")
         {
             gameObject.transform.position = playerOriPos;
-
-
         }
-        /*
-        if (other.gameObject.CompareTag("PowerUP"))
-        {
-            other.gameObject.SetActive(false);
-        }
-        // Indtil videre er der ingen reel PowerUP
-        Debug.Log("TORNADO");
-
-        }*/
     }
 
 }
