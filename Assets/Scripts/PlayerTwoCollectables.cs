@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class PlayerTwoCollectables : MonoBehaviour
 {
@@ -13,6 +14,11 @@ public class PlayerTwoCollectables : MonoBehaviour
     private int playerTwoCurrentCount;
     public int playerTwoTotal;
     public bool gameWon;
+
+    public int maxCoinHeld;
+    public Image[] coins;
+    public Sprite fullCoin;
+    public Sprite emptyCoin;
 
     public Collider CoinCollider;
 
@@ -38,7 +44,28 @@ public class PlayerTwoCollectables : MonoBehaviour
 
     public void SetPlayerTwoCountText()
     {
-        Player2Count.text = "Carrying: " + playerTwoCount.ToString();
+        /*Player2Count.text = "Carrying: " + playerTwoCount.ToString();*/
+        //Et loop der tjekker for coins. hvergang man samler en coin op aktiverer den coin sprite og mister man eller ikke har nogle er der en empty coin sprite aktiveret.
+        for (int i = 0; i < coins.Length; i++)
+        {
+            if (i < playerTwoCount)
+            {
+                coins[i].sprite = fullCoin;
+            }
+            else
+            {
+                coins[i].sprite = emptyCoin;
+            }
+
+            if (i < maxCoinHeld)
+            {
+                coins[i].enabled = true;
+            }
+            else
+            {
+                coins[i].enabled = false;
+            }
+        }
     }
 
     void SetPlayerTwoTotalText()
