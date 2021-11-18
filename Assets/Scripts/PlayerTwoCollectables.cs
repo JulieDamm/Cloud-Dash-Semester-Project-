@@ -116,7 +116,7 @@ public class PlayerTwoCollectables : MonoBehaviour
         if (other.gameObject.CompareTag("LockPowerUp"))
         {
             Destroy(other.gameObject);
-            LockClone = Instantiate(Lock, new Vector3(12.5f, 0.7f, 0f), Quaternion.identity);
+            LockClone = Instantiate(Lock, new Vector3(12.5f, 0.1f, 0f), transform.rotation * Quaternion.Euler(90f, 0f, 0f));
         }
 
         if (other.gameObject.CompareTag("IcePowerUp"))
