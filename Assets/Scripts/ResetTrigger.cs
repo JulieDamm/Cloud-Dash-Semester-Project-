@@ -44,12 +44,23 @@ public class ResetTrigger : MonoBehaviour
             StartCoroutine(Fall());
             GetComponent<Renderer>().material = blue;
         }
+
+        if (collision.gameObject.tag == "Tornado")
+        {
+            StartCoroutine(TornadoFall());
+        }
     }
 
     //Fall afventer i sekunder og derefter sl?r kinematik fra. 
     IEnumerator Fall()
     {
         yield return new WaitForSeconds(platFall);
+        rbp.isKinematic = false;
+    }
+
+    IEnumerator TornadoFall()
+    {
+        yield return new WaitForSeconds(0.1f);
         rbp.isKinematic = false;
     }
 
