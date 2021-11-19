@@ -63,6 +63,9 @@ MonoBehaviour:
   blue: {fileID: 2100000, guid: f354a42db5c061d44801a216dfb0c5e6, type: 2}
   originalmat: {fileID: 2100000, guid: 83892ce999ef57d489b6326e47272928, type: 2}
   Synlig: {fileID: 466005736}
+  blueCloud: {fileID: 21300000, guid: 5c8676e3f5f7c4dbcb97a992ac564e4c, type: 3}
+  redCloud: {fileID: 21300000, guid: 80496580aa28341378c4f86ce5ad58dc, type: 3}
+  whiteCloud: {fileID: 21300000, guid: 57e5d335fe1fd4e168386325c07d2b7c, type: 3}
   platRes: 0.5
   platFall: 2
 --- !u!54 &-1350882333597520622

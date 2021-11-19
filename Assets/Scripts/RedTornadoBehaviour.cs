@@ -6,8 +6,6 @@ public class RedTornadoBehaviour : MonoBehaviour
 {
     public float speed = 1;
     public GameObject RedTornadoClone;
-    //public PlayerOneCollectables playerOne;
-    //public PlayerTwoCollectables playerTwo;
 
     // Start is called before the first frame update
     void Start()

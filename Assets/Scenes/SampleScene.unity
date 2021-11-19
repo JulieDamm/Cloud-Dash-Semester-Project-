@@ -6718,6 +6718,9 @@ MonoBehaviour:
   blue: {fileID: 0}
   originalmat: {fileID: 0}
   Synlig: {fileID: 0}
+  blueCloud: {fileID: 0}
+  redCloud: {fileID: 0}
+  whiteCloud: {fileID: 0}
   platRes: 0.5
   platFall: 1
 --- !u!1 &1611500630
@@ -8015,10 +8018,6 @@ PrefabInstance:
     - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
       propertyPath: m_Name
       value: Sky (41)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
