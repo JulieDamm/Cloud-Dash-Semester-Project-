@@ -29,6 +29,7 @@ public class PlayerTwoCollectables : MonoBehaviour
     public GameObject LockClone;
     public Material IceBlue;
     public Material origmat;
+    public Player1Skills P1S;
 
     // Start is called before the first frame update
     void Start()
@@ -150,6 +151,7 @@ public class PlayerTwoCollectables : MonoBehaviour
         {
             Destroy(other.gameObject);
             GameObject.Find("Player1").GetComponent<Renderer>().material = IceBlue;
+            P1S.RandomSkill1 = 20;
             StartCoroutine(Defrost());
         }
     }
@@ -158,5 +160,6 @@ public class PlayerTwoCollectables : MonoBehaviour
     {
         yield return new WaitForSeconds(5f);
         GameObject.Find("Player1").GetComponent<Renderer>().material = origmat;
+        P1S.RandomSkill1 = P1S.OriSkill1;
     }
 }
