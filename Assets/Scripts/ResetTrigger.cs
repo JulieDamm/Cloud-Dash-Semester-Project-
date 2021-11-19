@@ -12,6 +12,10 @@ public class ResetTrigger : MonoBehaviour
     public Material originalmat;
 
     public Renderer Synlig;
+    private SpriteRenderer spriteRenderer;
+    public Sprite blueCloud;
+    public Sprite redCloud;
+    public Sprite whiteCloud;
     public float platRes = 1.0f;
     public float platFall = 0.5f;
    
@@ -22,7 +26,8 @@ public class ResetTrigger : MonoBehaviour
         originalPos = gameObject.transform.position;
 
         rbp = GetComponent<Rigidbody>();
-        
+
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -37,12 +42,17 @@ public class ResetTrigger : MonoBehaviour
         if(collision.gameObject.tag == "Player1")
         {
             StartCoroutine(Fall());
-            GetComponent<Renderer>().material = red;
+            GetComponent<SpriteRenderer>().sprite = redCloud;
         }
         if (collision.gameObject.tag == "Player2")
         {
             StartCoroutine(Fall());
-            GetComponent<Renderer>().material = blue;
+            GetComponent<SpriteRenderer>().sprite = blueCloud;
+        }
+
+        if (collision.gameObject.tag == "Tornado")
+        {
+            StartCoroutine(TornadoFall());
         }
     }
 
@@ -50,6 +60,12 @@ public class ResetTrigger : MonoBehaviour
     IEnumerator Fall()
     {
         yield return new WaitForSeconds(platFall);
+        rbp.isKinematic = false;
+    }
+
+    IEnumerator TornadoFall()
+    {
+        yield return new WaitForSeconds(0.1f);
         rbp.isKinematic = false;
     }
 
@@ -68,7 +84,7 @@ public class ResetTrigger : MonoBehaviour
         Synlig.enabled = false;
         yield return new WaitForSeconds(platRes);
         gameObject.transform.position = originalPos;
-        GetComponent<Renderer>().material = originalmat;
+        GetComponent<SpriteRenderer>().sprite = whiteCloud;
         Synlig.enabled = true;
         rbp.isKinematic = true;
     }

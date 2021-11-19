@@ -34,7 +34,7 @@ public class PowerUpSpawner : MonoBehaviour
         {
             int spawnPointIndex = Random.Range(0, possiblelocations.Count);
 
-            Instantiate(PowerUps [Random.Range (0, PowerUps.Length)], possiblelocations[spawnPointIndex].position, possiblelocations[spawnPointIndex].rotation);
+            Instantiate(PowerUps [Random.Range (0, PowerUps.Length)], possiblelocations[spawnPointIndex].position, transform.rotation * Quaternion.Euler(90f, 0f, 0f));
 
             possiblelocations.RemoveAt(spawnPointIndex);
         }

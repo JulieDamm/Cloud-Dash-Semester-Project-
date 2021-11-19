@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class PlayerOneCollectables : MonoBehaviour
 {
@@ -13,6 +14,11 @@ public class PlayerOneCollectables : MonoBehaviour
     private int playerOneCurrentCount;
     public int playerOneTotal;
     public bool gameWon;
+
+    public int maxCoinHeld;
+    public Image[] coins;
+    public Sprite fullCoin;
+    public Sprite emptyCoin;
 
     public Collider CoinCollider;
 
@@ -38,7 +44,28 @@ public class PlayerOneCollectables : MonoBehaviour
 
     public void SetPlayerOneCountText()
     {
-        Player1Count.text = "Carrying: " + playerOneCount.ToString();
+        /*Player1Count.text = "Carrying: " + playerOneCount.ToString();*/
+        //Et loop der tjekker for coins. hvergang man samler en coin op aktiverer den coin sprite og mister man eller ikke har nogle er der en empty coin sprite aktiveret.
+        for (int i = 0; i < coins.Length; i++)
+        {
+            if(i < playerOneCount)
+            {
+                coins[i].sprite = fullCoin;
+            }
+            else
+            {
+                coins[i].sprite = emptyCoin;
+            }
+
+            if (i < maxCoinHeld)
+            {
+                coins[i].enabled = true;
+            }
+            else
+            {
+                coins[i].enabled = false;
+            }
+        }
     }
 
     void SetPlayerOneTotalText()
@@ -118,7 +145,7 @@ public class PlayerOneCollectables : MonoBehaviour
         if (other.gameObject.CompareTag("LockPowerUp"))
         {
             Destroy(other.gameObject);
-            LockClone = Instantiate(Lock, new Vector3(-12.5f, 0.7f, 0f), Quaternion.identity);
+            LockClone = Instantiate(Lock, new Vector3(-12.45f, 0.1f, 0f), transform.rotation * Quaternion.Euler (90f, 0f, 0f));
         }
 
         if (other.gameObject.CompareTag("IcePowerUp"))
