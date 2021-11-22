@@ -17,6 +17,7 @@ public class Player1Skills : MonoBehaviour
     public float NextFireTime = 0;
 
     public int RandomSkill1;
+    public int OriSkill1;
 
     public Vector3 Jump;
 
@@ -31,10 +32,12 @@ public class Player1Skills : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         RandomSkill1 = Random.Range(1, 5);
+        OriSkill1 = RandomSkill1;
 
         DashSpeed = 25;
         PushSpeed = 50;
         BlinkSpeed = 7;
+        JumpForce = 25;
     }
 
     // Update is called once per frame

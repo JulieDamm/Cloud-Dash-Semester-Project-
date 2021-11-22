@@ -18,6 +18,8 @@ public class Player2Skills : MonoBehaviour
 
     public int RandomSkill2;
 
+    public int OriSkill2;
+
     public Vector3 Jump;
 
     public float JumpForce = 10;
@@ -32,10 +34,12 @@ public class Player2Skills : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         RandomSkill2 = Random.Range(1, 5);
+        OriSkill2 = RandomSkill2;
 
         DashSpeed = 25;
         PushSpeed = 50;
         BlinkSpeed = 7;
+        JumpForce = 25;
     }
 
     // Update is called once per frame
@@ -44,6 +48,7 @@ public class Player2Skills : MonoBehaviour
         if (P1S.RandomSkill1 == RandomSkill2)
         {
             RandomSkill2 = Random.Range(1, 5);
+            OriSkill2 = RandomSkill2;
         }
     }
 
