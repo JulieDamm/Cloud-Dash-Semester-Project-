@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerOneCollectables : MonoBehaviour
 {
@@ -77,13 +78,16 @@ public class PlayerOneCollectables : MonoBehaviour
 
     void SetPlayerOneWinText()
     {
-        Player1WinText.text = "Player 1 Wins!";
+        Player1WinText.text = "Player 1 Wins! <br> <size=24>Press 'R' to Restart</size>";
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (gameWon == true && Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene("SampleScene");
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
