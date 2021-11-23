@@ -142,7 +142,7 @@ public class PlayerTwoCollectables : MonoBehaviour
         {
             Destroy(other.gameObject);
             int blueTornadoSpawnPointIndex = Random.Range(0, BlueTornadoSpawnPoints.Length);
-            BlueTornadoClone = Instantiate(BlueTornado, BlueTornadoSpawnPoints[blueTornadoSpawnPointIndex].position, Quaternion.identity);
+            BlueTornadoClone = Instantiate(BlueTornado, BlueTornadoSpawnPoints[blueTornadoSpawnPointIndex].position, transform.rotation * Quaternion.Euler(90f, 0f, 0f));
         }
 
         if (other.gameObject.CompareTag("LockPowerUp"))

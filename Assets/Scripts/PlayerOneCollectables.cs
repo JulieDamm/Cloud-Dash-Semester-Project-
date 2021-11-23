@@ -145,13 +145,13 @@ public class PlayerOneCollectables : MonoBehaviour
             Destroy(other.gameObject);
 
             int redTornadoSpawnPointIndex = Random.Range(0, RedTornadoSpawnPoints.Length);
-            RedTornadoClone = Instantiate (RedTornado, RedTornadoSpawnPoints[redTornadoSpawnPointIndex].position, Quaternion.identity);
+            RedTornadoClone = Instantiate(RedTornado, RedTornadoSpawnPoints[redTornadoSpawnPointIndex].position, transform.rotation); //transform.rotation * Quaternion.Euler(0f, 0f, 0f));
         }
 
         if (other.gameObject.CompareTag("LockPowerUp"))
         {
             Destroy(other.gameObject);
-            LockClone = Instantiate(Lock, new Vector3(-12.45f, 0.1f, 0f), transform.rotation * Quaternion.Euler (90f, 0f, 0f));
+            LockClone = Instantiate(Lock, new Vector3(-12.45f, 0.1f, 0f), transform.rotation * Quaternion.Euler (0f, 0f, 0f));
         }
 
         if (other.gameObject.CompareTag("IcePowerUp"))

@@ -11,7 +11,7 @@ public class Control : MonoBehaviour
 
     Vector3 playerOriPos;
 
-   
+    public Animator animator;
 
 
     void Start()
@@ -42,6 +42,15 @@ public class Control : MonoBehaviour
             Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 
             rb.AddForce(movement * speed, ForceMode.Impulse);
+
+            animator.SetFloat("Speed", Mathf.Abs(moveHorizontal));
+            animator.SetFloat("Speed", Mathf.Abs(moveVertical));
+
+            /*if (movement != Vector3.zero)
+            {
+                transform.forward = movement;
+                transform.Rotate(90f, 0f, -90f);
+            }*/
 
         }
 

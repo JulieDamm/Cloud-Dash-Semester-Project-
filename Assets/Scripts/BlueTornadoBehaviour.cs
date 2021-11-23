@@ -6,8 +6,6 @@ public class BlueTornadoBehaviour : MonoBehaviour
 {
     public float speed = 1;
     public GameObject BlueTornadoClone;
-    //public PlayerOneCollectables playerOne;
-    //public PlayerTwoCollectables playerTwo;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +16,7 @@ public class BlueTornadoBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.SetPositionAndRotation(transform.position, Quaternion.Euler(90f, 0f, 0f));
         transform.Translate(Vector3.right * speed * Time.deltaTime);
     }
 
