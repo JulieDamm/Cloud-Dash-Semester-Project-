@@ -46,11 +46,11 @@ public class Control : MonoBehaviour
             animator.SetFloat("Speed", Mathf.Abs(moveHorizontal));
             animator.SetFloat("Speed", Mathf.Abs(moveVertical));
 
-            /*if (movement != Vector3.zero)
+            if (movement != Vector3.zero)
             {
                 transform.forward = movement;
                 transform.Rotate(90f, 0f, -90f);
-            }*/
+            }
 
         }
 
