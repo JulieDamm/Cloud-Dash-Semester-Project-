@@ -40,6 +40,11 @@ public class Player2Skills : MonoBehaviour
         PushSpeed = 50;
         BlinkSpeed = 7;
         JumpForce = 25;
+
+        if(RandomSkill2 == 2)
+        {
+            rb.mass = 1.5f;
+        }
     }
 
     // Update is called once per frame
@@ -64,6 +69,7 @@ public class Player2Skills : MonoBehaviour
         {
             rb.mass = 1;
             C.speed = 0.7f;
+            rb.drag = 5;
             if (Time.time > NextFireTime)
             { 
                 if (Input.GetKey(KeyCode.Space))
@@ -76,15 +82,16 @@ public class Player2Skills : MonoBehaviour
         }
         if (RandomSkill2 == 2)
         {
-            rb.mass = 5;
-            C.speed = 3;
+            C.speed = 0.9f;
+            rb.drag = 5;
             if (Time.time > NextFireTime)
             {
                 if (Input.GetKey(KeyCode.Space))
                 {
                     rb.AddForce(movement * PushSpeed, ForceMode.Impulse);
                     NextFireTime = Time.time + CoolDownTime;
-
+                    rb.mass = 50;
+                    StartCoroutine(Push2());
                 }
             }
         }
@@ -92,7 +99,7 @@ public class Player2Skills : MonoBehaviour
         {
             C.speed = 0.6f;
             rb.mass = 1;
-
+            rb.drag = 5;
             Jump = new Vector3(0.0f, 1f, 0.0f);
 
             if (Time.time > NextFireTime)
@@ -108,6 +115,7 @@ public class Player2Skills : MonoBehaviour
         {
             C.speed = 0.6f;
             rb.mass = 1;
+            rb.drag = 5;
             if (Time.time > NextFireTime)
             {
                 if (Input.GetKey(KeyCode.Space))
@@ -124,4 +132,12 @@ public class Player2Skills : MonoBehaviour
             rb.drag = 1;
         }
     }
+
+    IEnumerator Push2()
+    {
+        yield return new WaitForSeconds(0.5f);
+        rb.mass = 1.5f;
+
+    }
+
 }
