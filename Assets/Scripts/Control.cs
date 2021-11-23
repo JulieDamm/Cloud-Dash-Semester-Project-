@@ -56,6 +56,7 @@ public class Control : MonoBehaviour
             rb.AddForce(movement * speed, ForceMode.Impulse);
         }
 
+        rb.AddForce(new Vector3(0, -10, 0));
             
         }
 

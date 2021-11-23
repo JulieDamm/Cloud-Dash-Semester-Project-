@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerTwoCollectables : MonoBehaviour
 {
@@ -29,6 +30,7 @@ public class PlayerTwoCollectables : MonoBehaviour
     public GameObject LockClone;
     public Material IceBlue;
     public Material origmat;
+    public Player1Skills P1S;
 
     // Start is called before the first frame update
     void Start()
@@ -75,13 +77,16 @@ public class PlayerTwoCollectables : MonoBehaviour
 
     void SetPlayerTwoWinText()
     {
-        Player2WinText.text = "Player 2 Wins!";
+        Player2WinText.text = "Player 2 Wins! <br> <size=24>Press 'R' to Restart</size>";
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (gameWon == true && Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene("SampleScene");
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -150,6 +155,7 @@ public class PlayerTwoCollectables : MonoBehaviour
         {
             Destroy(other.gameObject);
             GameObject.Find("Player1").GetComponent<Renderer>().material = IceBlue;
+            P1S.RandomSkill1 = 20;
             StartCoroutine(Defrost());
         }
     }
@@ -158,5 +164,6 @@ public class PlayerTwoCollectables : MonoBehaviour
     {
         yield return new WaitForSeconds(5f);
         GameObject.Find("Player1").GetComponent<Renderer>().material = origmat;
+        P1S.RandomSkill1 = P1S.OriSkill1;
     }
 }

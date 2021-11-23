@@ -17,6 +17,7 @@ public class Player1Skills : MonoBehaviour
     public float NextFireTime = 0;
 
     public int RandomSkill1;
+    public int OriSkill1;
 
     public Vector3 Jump;
 
@@ -31,10 +32,17 @@ public class Player1Skills : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         RandomSkill1 = Random.Range(1, 5);
+        OriSkill1 = RandomSkill1;
 
         DashSpeed = 25;
         PushSpeed = 50;
         BlinkSpeed = 7;
+        JumpForce = 25;
+
+        if (RandomSkill1 == 2)
+        {
+            rb.mass = 1.5f;
+        }
     }
 
     // Update is called once per frame
@@ -54,6 +62,7 @@ public class Player1Skills : MonoBehaviour
         {
             rb.mass = 1;
             C.speed = 0.7f;
+            rb.drag = 5;
             if (Time.time > NextFireTime)
             {
                 if (Input.GetKey("l"))
@@ -66,15 +75,16 @@ public class Player1Skills : MonoBehaviour
         }
         if (RandomSkill1 == 2)
         {
-            rb.mass = 5;
             C.speed = 3;
+            rb.drag = 5;
             if (Time.time > NextFireTime)
             {
                 if (Input.GetKey("l"))
                 {
                     rb.AddForce(movement * PushSpeed, ForceMode.Impulse);
                     NextFireTime = Time.time + CoolDownTime;
-
+                    rb.mass = 50;
+                    StartCoroutine(Push1());
                 }
             }
         }
@@ -82,7 +92,7 @@ public class Player1Skills : MonoBehaviour
         {
             C.speed = 0.6f;
             rb.mass = 1;
-
+            rb.drag = 5;
             Jump = new Vector3(0.0f, 1f, 0.0f);
 
             if (Time.time > NextFireTime)
@@ -98,6 +108,7 @@ public class Player1Skills : MonoBehaviour
         {
             C.speed = 0.6f;
             rb.mass = 1;
+            rb.drag = 5;
             if (Time.time > NextFireTime)
             {
                 if (Input.GetKey("l"))
@@ -114,6 +125,12 @@ public class Player1Skills : MonoBehaviour
             rb.drag = 1;
 
         }
+    }
+    IEnumerator Push1()
+    {
+        yield return new WaitForSeconds(0.5f);
+        rb.mass = 1.5f;
+
     }
 
 }
