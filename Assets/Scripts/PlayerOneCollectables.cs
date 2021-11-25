@@ -20,6 +20,7 @@ public class PlayerOneCollectables : MonoBehaviour
     public Image[] coins;
     public Sprite fullCoin;
     public Sprite emptyCoin;
+    private SpriteRenderer spriteR;
 
     public Collider CoinCollider;
 
@@ -73,7 +74,10 @@ public class PlayerOneCollectables : MonoBehaviour
 
     void SetPlayerOneTotalText()
     {
-        Player1Total.text = "Total: " + playerOneTotal.ToString();
+        spriteR = GetComponent<SpriteRenderer>();
+
+
+        Player1Total.text = "Total: " + "<sprite=0>" + playerOneTotal.ToString();
     }
 
     void SetPlayerOneWinText()

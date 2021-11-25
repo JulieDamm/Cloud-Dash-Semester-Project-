@@ -72,7 +72,7 @@ public class PlayerTwoCollectables : MonoBehaviour
 
     void SetPlayerTwoTotalText()
     {
-        Player2Total.text = "Total: " + playerTwoTotal.ToString();
+        Player2Total.text = "Total: " + "<sprite=0>" + playerTwoTotal.ToString();
     }
 
     void SetPlayerTwoWinText()
