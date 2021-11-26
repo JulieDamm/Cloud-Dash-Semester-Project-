@@ -93,6 +93,12 @@ public class PlayerTwoCollectables : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("BlueHome"))
         {
+            //SKAL vare foer totalcount
+            if (playerTwoCurrentCount >= 1)
+            {
+                FindObjectOfType<AudioManager>().Play("Coindrop");
+            }
+
             playerTwoTotal = playerTwoTotal + playerTwoCurrentCount;
 
             playerTwoCount = 0;
@@ -107,6 +113,8 @@ public class PlayerTwoCollectables : MonoBehaviour
                 GetComponent<Control>().enabled = false;
                 GameObject.Find("Player1").GetComponent<Control>().enabled = false;
                 gameWon = true;
+
+                FindObjectOfType<AudioManager>().Play("Player2Win");
             }
         }
     }
@@ -143,17 +151,20 @@ public class PlayerTwoCollectables : MonoBehaviour
             Destroy(other.gameObject);
             int blueTornadoSpawnPointIndex = Random.Range(0, BlueTornadoSpawnPoints.Length);
             BlueTornadoClone = Instantiate(BlueTornado, BlueTornadoSpawnPoints[blueTornadoSpawnPointIndex].position, transform.rotation * Quaternion.Euler(90f, 0f, 0f));
+            FindObjectOfType<AudioManager>().Play("Tornado");
         }
 
         if (other.gameObject.CompareTag("LockPowerUp"))
         {
             Destroy(other.gameObject);
             LockClone = Instantiate(Lock, new Vector3(12.5f, 0.1f, 0f), transform.rotation * Quaternion.Euler(90f, 0f, 0f));
+            FindObjectOfType<AudioManager>().Play("Lock");
         }
 
         if (other.gameObject.CompareTag("IcePowerUp"))
         {
             Destroy(other.gameObject);
+            FindObjectOfType<AudioManager>().Play("Ice");
             GameObject.Find("Player1").GetComponent<Renderer>().material = IceBlue;
             P1S.RandomSkill1 = 20;
             StartCoroutine(Defrost());
