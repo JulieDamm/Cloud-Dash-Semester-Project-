@@ -11,7 +11,7 @@ public class Control : MonoBehaviour
 
     Vector3 playerOriPos;
 
-   
+    public Animator animator;
 
 
     void Start()
@@ -43,6 +43,15 @@ public class Control : MonoBehaviour
 
             rb.AddForce(movement * speed, ForceMode.Impulse);
 
+            animator.SetFloat("Speed", Mathf.Abs(moveHorizontal));
+            animator.SetFloat("Speed", Mathf.Abs(moveVertical));
+
+            if (movement != Vector3.zero)
+            {
+                transform.forward = movement;
+                transform.Rotate(90f, 0f, -90f);
+            }
+
         }
 
         if (gameObject.CompareTag("Player2"))
@@ -56,6 +65,7 @@ public class Control : MonoBehaviour
             rb.AddForce(movement * speed, ForceMode.Impulse);
         }
 
+        rb.AddForce(new Vector3(0, -10, 0));
             
         }
 

@@ -16,6 +16,7 @@ public class RedTornadoBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.SetPositionAndRotation(transform.position, Quaternion.Euler (90f, 0f, 0f));
         transform.Translate(Vector3.left * speed * Time.deltaTime);
     }
 

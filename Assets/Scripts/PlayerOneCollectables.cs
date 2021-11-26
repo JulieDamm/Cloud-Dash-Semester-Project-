@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerOneCollectables : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class PlayerOneCollectables : MonoBehaviour
     public Image[] coins;
     public Sprite fullCoin;
     public Sprite emptyCoin;
+    private SpriteRenderer spriteR;
 
     public Collider CoinCollider;
 
@@ -29,6 +31,8 @@ public class PlayerOneCollectables : MonoBehaviour
     public GameObject LockClone;
     public Material IceBlue;
     public Material origmat;
+    public Player2Skills P2S;
+
 
     // Start is called before the first frame update
     void Start()
@@ -70,18 +74,24 @@ public class PlayerOneCollectables : MonoBehaviour
 
     void SetPlayerOneTotalText()
     {
-        Player1Total.text = "Total: " + playerOneTotal.ToString();
+        spriteR = GetComponent<SpriteRenderer>();
+
+
+        Player1Total.text = "Total: " + "<sprite=0>" + playerOneTotal.ToString();
     }
 
     void SetPlayerOneWinText()
     {
-        Player1WinText.text = "Player 1 Wins!";
+        Player1WinText.text = "Player 1 Wins! <br> <size=24>Press 'R' to Restart</size>";
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (gameWon == true && Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene("SampleScene");
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -139,19 +149,20 @@ public class PlayerOneCollectables : MonoBehaviour
             Destroy(other.gameObject);
 
             int redTornadoSpawnPointIndex = Random.Range(0, RedTornadoSpawnPoints.Length);
-            RedTornadoClone = Instantiate (RedTornado, RedTornadoSpawnPoints[redTornadoSpawnPointIndex].position, Quaternion.identity);
+            RedTornadoClone = Instantiate(RedTornado, RedTornadoSpawnPoints[redTornadoSpawnPointIndex].position, transform.rotation); //transform.rotation * Quaternion.Euler(0f, 0f, 0f));
         }
 
         if (other.gameObject.CompareTag("LockPowerUp"))
         {
             Destroy(other.gameObject);
-            LockClone = Instantiate(Lock, new Vector3(-12.45f, 0.1f, 0f), transform.rotation * Quaternion.Euler (90f, 0f, 0f));
+            LockClone = Instantiate(Lock, new Vector3(-12.45f, 0.1f, 0f), transform.rotation * Quaternion.Euler (0f, 0f, 0f));
         }
 
         if (other.gameObject.CompareTag("IcePowerUp"))
         {
             Destroy(other.gameObject);
             GameObject.Find("Player2").GetComponent<Renderer>().material = IceBlue;
+            P2S.RandomSkill2 = 20;
             StartCoroutine(Defrost());
         }
     }
@@ -160,5 +171,6 @@ public class PlayerOneCollectables : MonoBehaviour
     {
         yield return new WaitForSeconds(5f);
         GameObject.Find("Player2").GetComponent<Renderer>().material = origmat;
+        P2S.RandomSkill2 = P2S.OriSkill2;
     }
 }

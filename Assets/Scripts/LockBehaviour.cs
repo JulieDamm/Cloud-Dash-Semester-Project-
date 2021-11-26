@@ -9,6 +9,7 @@ public class LockBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        transform.SetPositionAndRotation(transform.position, Quaternion.Euler(90f, 0f, 0f));
         StartCoroutine(Unlock());
     }
 
