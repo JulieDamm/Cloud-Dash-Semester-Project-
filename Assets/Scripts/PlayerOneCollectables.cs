@@ -20,6 +20,7 @@ public class PlayerOneCollectables : MonoBehaviour
     public Image[] coins;
     public Sprite fullCoin;
     public Sprite emptyCoin;
+    private SpriteRenderer spriteR;
 
     public Collider CoinCollider;
 
@@ -73,7 +74,10 @@ public class PlayerOneCollectables : MonoBehaviour
 
     void SetPlayerOneTotalText()
     {
-        Player1Total.text = "Total: " + playerOneTotal.ToString();
+        spriteR = GetComponent<SpriteRenderer>();
+
+
+        Player1Total.text = "Total: " + "<sprite=0>" + playerOneTotal.ToString();
     }
 
     void SetPlayerOneWinText()
@@ -94,6 +98,14 @@ public class PlayerOneCollectables : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("RedHome"))
         {
+       
+                //Spiller lyd naar spiller har coin. SKAL vaere over PlayerTotal Addition
+                if (playerOneCurrentCount >= 1)
+
+                {
+                    FindObjectOfType<AudioManager>().Play("Coindrop");
+                }
+
             playerOneTotal = playerOneTotal + playerOneCurrentCount;
 
             playerOneCount = 0;
@@ -108,6 +120,8 @@ public class PlayerOneCollectables : MonoBehaviour
                 GetComponent<Control>().enabled = false;
                 GameObject.Find("Player2").GetComponent<Control>().enabled = false;
                 gameWon = true;
+                
+                FindObjectOfType<AudioManager>().Play("Player1Win");
             }
         }
     }
@@ -146,17 +160,20 @@ public class PlayerOneCollectables : MonoBehaviour
 
             int redTornadoSpawnPointIndex = Random.Range(0, RedTornadoSpawnPoints.Length);
             RedTornadoClone = Instantiate(RedTornado, RedTornadoSpawnPoints[redTornadoSpawnPointIndex].position, transform.rotation); //transform.rotation * Quaternion.Euler(0f, 0f, 0f));
+            FindObjectOfType<AudioManager>().Play("Tornado");
         }
 
         if (other.gameObject.CompareTag("LockPowerUp"))
         {
             Destroy(other.gameObject);
             LockClone = Instantiate(Lock, new Vector3(-12.45f, 0.1f, 0f), transform.rotation * Quaternion.Euler (0f, 0f, 0f));
+            FindObjectOfType<AudioManager>().Play("Lock");
         }
 
         if (other.gameObject.CompareTag("IcePowerUp"))
         {
             Destroy(other.gameObject);
+            FindObjectOfType<AudioManager>().Play("Ice");
             GameObject.Find("Player2").GetComponent<Renderer>().material = IceBlue;
             P2S.RandomSkill2 = 20;
             StartCoroutine(Defrost());

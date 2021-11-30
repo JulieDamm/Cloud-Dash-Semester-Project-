@@ -28,6 +28,8 @@ public class Player2Skills : MonoBehaviour
 
     public Player1Skills P1S;
 
+    // 1 = Dash 2 = Push 3 = Jump 4 = Teleport
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,15 +38,16 @@ public class Player2Skills : MonoBehaviour
         RandomSkill2 = Random.Range(1, 5);
         OriSkill2 = RandomSkill2;
 
-        DashSpeed = 25;
-        PushSpeed = 50;
-        BlinkSpeed = 7;
+        DashSpeed = 30;
+        PushSpeed = 40;
+        BlinkSpeed = 6;
         JumpForce = 25;
 
-        if(RandomSkill2 == 2)
+        if (RandomSkill2 == 2)
         {
             rb.mass = 1.5f;
         }
+
     }
 
     // Update is called once per frame
@@ -68,7 +71,7 @@ public class Player2Skills : MonoBehaviour
         if (RandomSkill2 == 1)
         {
             rb.mass = 1;
-            C.speed = 0.7f;
+            C.speed = 1.1f;
             rb.drag = 5;
             if (Time.time > NextFireTime)
             { 
@@ -82,8 +85,9 @@ public class Player2Skills : MonoBehaviour
         }
         if (RandomSkill2 == 2)
         {
-            C.speed = 0.9f;
+            C.speed = 1.5f;
             rb.drag = 5;
+
             if (Time.time > NextFireTime)
             {
                 if (Input.GetKey(KeyCode.Space))
@@ -97,7 +101,7 @@ public class Player2Skills : MonoBehaviour
         }
         if (RandomSkill2 == 3)
         {
-            C.speed = 0.6f;
+            C.speed = 1;
             rb.mass = 1;
             rb.drag = 5;
             Jump = new Vector3(0.0f, 1f, 0.0f);
@@ -113,7 +117,7 @@ public class Player2Skills : MonoBehaviour
         }
         if (RandomSkill2 == 4)
         {
-            C.speed = 0.6f;
+            C.speed = 1;
             rb.mass = 1;
             rb.drag = 5;
             if (Time.time > NextFireTime)
@@ -127,9 +131,14 @@ public class Player2Skills : MonoBehaviour
         }
         if (RandomSkill2 == 20)
         {
-            C.speed = 0.2f;
+            C.speed = 0.4f;
             rb.mass = 0.5f;
             rb.drag = 1;
+            if (OriSkill2 == 2)
+            {
+                StartCoroutine(Ice2());
+            }
+               
         }
     }
 
@@ -140,4 +149,9 @@ public class Player2Skills : MonoBehaviour
 
     }
 
+    IEnumerator Ice2()
+    {
+        yield return new WaitForSeconds(5);
+        rb.mass = 1.5f;
+    }
 }
