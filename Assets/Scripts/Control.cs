@@ -63,11 +63,18 @@ public class Control : MonoBehaviour
 
 
             rb.AddForce(movement * speed, ForceMode.Impulse);
+
+            animator.SetFloat("Speed", Mathf.Abs(moveHorizontal));
+            animator.SetFloat("Speed", Mathf.Abs(moveVertical));
+
+            if (movement != Vector3.zero)
+            {
+                transform.forward = movement;
+                transform.Rotate(90f, 0f, 90f);
+            }
         }
 
-        rb.AddForce(new Vector3(0, -10, 0));
-            
-        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
