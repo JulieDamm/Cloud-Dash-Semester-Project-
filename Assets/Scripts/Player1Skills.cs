@@ -8,9 +8,9 @@ public class Player1Skills : MonoBehaviour
 
     public float DashSpeed = 25;
 
-    public float PushSpeed = 50;
+    public float PushSpeed = 40;
 
-    public float BlinkSpeed = 7;
+    public float BlinkSpeed = 6;
 
     public float CoolDownTime = 5;
 
@@ -25,6 +25,8 @@ public class Player1Skills : MonoBehaviour
 
     public Control C;
 
+    // 1 = Dash 2 = Push 3 = Jump 4 = Teleport
+       
 
     // Start is called before the first frame update
     void Start()
@@ -34,9 +36,9 @@ public class Player1Skills : MonoBehaviour
         RandomSkill1 = Random.Range(1, 5);
         OriSkill1 = RandomSkill1;
 
-        DashSpeed = 25;
-        PushSpeed = 50;
-        BlinkSpeed = 7;
+        DashSpeed = 30;
+        PushSpeed = 40;
+        BlinkSpeed = 6;
         JumpForce = 25;
 
         if (RandomSkill1 == 2)
@@ -61,7 +63,7 @@ public class Player1Skills : MonoBehaviour
         if (RandomSkill1 == 1)
         {
             rb.mass = 1;
-            C.speed = 0.7f;
+            C.speed = 1.1f;
             rb.drag = 5;
             if (Time.time > NextFireTime)
             {
@@ -75,8 +77,9 @@ public class Player1Skills : MonoBehaviour
         }
         if (RandomSkill1 == 2)
         {
-            C.speed = 3;
+            C.speed = 1.5f;
             rb.drag = 5;
+ 
             if (Time.time > NextFireTime)
             {
                 if (Input.GetKey("l"))
@@ -90,7 +93,7 @@ public class Player1Skills : MonoBehaviour
         }
         if (RandomSkill1 == 3)
         {
-            C.speed = 0.6f;
+            C.speed = 1;
             rb.mass = 1;
             rb.drag = 5;
             Jump = new Vector3(0.0f, 1f, 0.0f);
@@ -106,9 +109,10 @@ public class Player1Skills : MonoBehaviour
         }
         if (RandomSkill1 == 4)
         {
-            C.speed = 0.6f;
+            C.speed = 1;
             rb.mass = 1;
             rb.drag = 5;
+
             if (Time.time > NextFireTime)
             {
                 if (Input.GetKey("l"))
@@ -120,10 +124,13 @@ public class Player1Skills : MonoBehaviour
         }
         if (RandomSkill1 == 20)
         {
-            C.speed = 0.2f;
+            C.speed = 0.4f;
             rb.mass = 0.5f;
             rb.drag = 1;
-
+            if (OriSkill1 == 2)
+            {
+                StartCoroutine(Ice1());
+            }
         }
     }
     IEnumerator Push1()
@@ -133,4 +140,10 @@ public class Player1Skills : MonoBehaviour
 
     }
 
+    IEnumerator Ice1()
+    {
+        yield return new WaitForSeconds(5);
+        rb.mass = 1.5f;
+    }
 }
+
