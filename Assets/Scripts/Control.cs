@@ -67,7 +67,7 @@ public class Control : MonoBehaviour
 
         rb.AddForce(new Vector3(0, -10, 0));
             
-        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -79,5 +79,6 @@ public class Control : MonoBehaviour
     }
 
 
+    
 
 }
