@@ -43,8 +43,8 @@ public class Control : MonoBehaviour
 
             rb.AddForce(movement * speed, ForceMode.Impulse);
 
-            animator.SetFloat("Speed", Mathf.Abs(moveHorizontal));
-            animator.SetFloat("Speed", Mathf.Abs(moveVertical));
+            animator.SetFloat("HorizontalSpeed", Mathf.Abs(moveHorizontal));
+            animator.SetFloat("VerticalSpeed", Mathf.Abs(moveVertical));
 
             if (movement != Vector3.zero)
             {
@@ -64,8 +64,8 @@ public class Control : MonoBehaviour
 
             rb.AddForce(movement * speed, ForceMode.Impulse);
 
-            animator.SetFloat("Speed", Mathf.Abs(moveHorizontal));
-            animator.SetFloat("Speed", Mathf.Abs(moveVertical));
+            animator.SetFloat("HorizontalSpeed", Mathf.Abs(moveHorizontal));
+            animator.SetFloat("VerticalSpeed", Mathf.Abs(moveVertical));
 
             if (movement != Vector3.zero)
             {
