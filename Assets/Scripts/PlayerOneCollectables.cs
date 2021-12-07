@@ -29,10 +29,10 @@ public class PlayerOneCollectables : MonoBehaviour
     public Transform[] RedTornadoSpawnPoints;
     public GameObject Lock;
     public GameObject LockClone;
-    public Material IceBlue;
-    public Material origmat;
+    public Sprite SheepIce;
     public Player2Skills P2S;
 
+    public GameObject SkyBrikker;
 
     // Start is called before the first frame update
     void Start()
@@ -82,7 +82,7 @@ public class PlayerOneCollectables : MonoBehaviour
 
     void SetPlayerOneWinText()
     {
-        Player1WinText.text = "Player 1 Wins! <br> <size=24>Press 'R' to Restart</size>";
+        Player1WinText.text = "<color=red>Red Player</color> Wins! <br> <size=24>Press 'R' to Restart</size>";
     }
 
     // Update is called once per frame
@@ -116,12 +116,7 @@ public class PlayerOneCollectables : MonoBehaviour
 
             if (playerOneTotal >= 10)
             {
-                SetPlayerOneWinText();
-                GetComponent<Control>().enabled = false;
-                GameObject.Find("Player2").GetComponent<Control>().enabled = false;
-                gameWon = true;
-                
-                FindObjectOfType<AudioManager>().Play("Player1Win");
+                StartCoroutine(PlayerOneWin());
             }
         }
     }
@@ -159,7 +154,7 @@ public class PlayerOneCollectables : MonoBehaviour
             Destroy(other.gameObject);
 
             int redTornadoSpawnPointIndex = Random.Range(0, RedTornadoSpawnPoints.Length);
-            RedTornadoClone = Instantiate(RedTornado, RedTornadoSpawnPoints[redTornadoSpawnPointIndex].position, transform.rotation); //transform.rotation * Quaternion.Euler(0f, 0f, 0f));
+            RedTornadoClone = Instantiate(RedTornado, RedTornadoSpawnPoints[redTornadoSpawnPointIndex].position, transform.rotation);
             FindObjectOfType<AudioManager>().Play("Tornado");
         }
 
@@ -174,7 +169,8 @@ public class PlayerOneCollectables : MonoBehaviour
         {
             Destroy(other.gameObject);
             FindObjectOfType<AudioManager>().Play("Ice");
-            GameObject.Find("Player2").GetComponent<Renderer>().material = IceBlue;
+            GameObject.Find("Player2").GetComponent<Animator>().enabled = false;
+            GameObject.Find("Player2").GetComponent<SpriteRenderer>().sprite = SheepIce;
             P2S.RandomSkill2 = 20;
             StartCoroutine(Defrost());
         }
@@ -183,7 +179,29 @@ public class PlayerOneCollectables : MonoBehaviour
     IEnumerator Defrost()
     {
         yield return new WaitForSeconds(5f);
-        GameObject.Find("Player2").GetComponent<Renderer>().material = origmat;
+        GameObject.Find("Player2").GetComponent<Animator>().enabled = true;
         P2S.RandomSkill2 = P2S.OriSkill2;
+    }
+
+    IEnumerator PlayerOneWin()
+    {
+        FindObjectOfType<AudioManager>().Play("Player1Win");
+        GetComponent<Control>().enabled = false;
+        GameObject.Find("Player2").GetComponent<Control>().enabled = false;
+        gameWon = true;
+        GameObject.Find("Player2").GetComponent<Rigidbody>().isKinematic = true;
+        yield return new WaitForSeconds(1.5f);
+        foreach (Transform child in SkyBrikker.transform)
+        {
+            Destroy(child.gameObject);
+        }
+        GameObject Spawn2 = GameObject.Find("Spawn 2");
+        Destroy(Spawn2);
+        yield return new WaitForSeconds(2f);
+        GameObject.Find("Player2").GetComponent<Rigidbody>().isKinematic = false;
+        yield return new WaitForSeconds(1.9f);
+        GameObject Player2 = GameObject.Find("Player2");
+        Destroy(Player2);
+        SetPlayerOneWinText();
     }
 }

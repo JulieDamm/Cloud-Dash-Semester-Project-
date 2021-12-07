@@ -7,17 +7,19 @@ public class ResetTrigger : MonoBehaviour
 
     Vector3 originalPos;
     private Rigidbody rbp;
-    public Material red;
-    public Material blue;
     public Material originalmat;
 
     public Renderer Synlig;
     private SpriteRenderer spriteRenderer;
+    private BoxCollider cloudCollider;
     public Sprite blueCloud;
     public Sprite redCloud;
     public Sprite whiteCloud;
     public float platRes = 1.0f;
     public float platFall = 0.5f;
+
+    public ParticleSystem CloudBurst;
+    public PlayerOneCollectables pO;
    
     // Start is called before the first frame update
     void Start()
@@ -28,6 +30,9 @@ public class ResetTrigger : MonoBehaviour
         rbp = GetComponent<Rigidbody>();
 
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        cloudCollider = gameObject.GetComponent<BoxCollider>();
+
+        transform.GetChild(0).gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -60,13 +65,39 @@ public class ResetTrigger : MonoBehaviour
     IEnumerator Fall()
     {
         yield return new WaitForSeconds(platFall);
-        rbp.isKinematic = false;
+        transform.GetChild(0).gameObject.SetActive(true);
+        cloudCollider.enabled = false;
+        spriteRenderer.enabled = false;
+        yield return new WaitForSeconds(0.3f);
+        transform.GetChild(0).gameObject.SetActive(false);
+        //Synlig.enabled = false;
+        yield return new WaitForSeconds(platRes);
+        //gameObject.transform.position = originalPos;
+        //Synlig.enabled = true;
+        //rbp.isKinematic = true;
+        cloudCollider.enabled = true;
+        GetComponent<SpriteRenderer>().sprite = whiteCloud;
+        spriteRenderer.enabled = true;
+        transform.GetChild(0).gameObject.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        transform.GetChild(0).gameObject.SetActive(false);
     }
 
     IEnumerator TornadoFall()
     {
         yield return new WaitForSeconds(0.1f);
-        rbp.isKinematic = false;
+        //rbp.isKinematic = false;
+        cloudCollider.enabled = false;
+        spriteRenderer.enabled = false;
+        transform.GetChild(0).gameObject.SetActive(true);
+        yield return new WaitForSeconds(platRes);
+        transform.GetChild(0).gameObject.SetActive(false);
+        GetComponent<SpriteRenderer>().sprite = whiteCloud;
+        cloudCollider.enabled = true;
+        spriteRenderer.enabled = true;
+        transform.GetChild(0).gameObject.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        transform.GetChild(0).gameObject.SetActive(false);
     }
 
     //N?r vores platform rammer en collider med tag "Respawn" s? starter Platformres funktionen.
@@ -74,19 +105,26 @@ public class ResetTrigger : MonoBehaviour
     {
         if(other.gameObject.tag == "Respawn")
         {
-            StartCoroutine(PlatformRes());
+            //StartCoroutine(PlatformRes());
         }
     }
 
     //Funktionen sl?r Mesh fra -> venter sekunder -> s?tter platformens position til dens start position -> sl?r Mesh til igen -> S?tter Rigidbody Kinematic til. 
-    IEnumerator PlatformRes()
+    //IEnumerator PlatformRes()
+    //{
+
+    //}
+
+    IEnumerator PlayerOneWin()
     {
-        Synlig.enabled = false;
-        yield return new WaitForSeconds(platRes);
-        gameObject.transform.position = originalPos;
-        GetComponent<SpriteRenderer>().sprite = whiteCloud;
-        Synlig.enabled = true;
-        rbp.isKinematic = true;
+        if (pO.gameWon)
+        {
+            transform.GetChild(0).gameObject.SetActive(false);
+            yield return new WaitForSeconds(1.5f);
+            transform.GetChild(0).gameObject.SetActive(true);
+            yield return new WaitForSeconds(2f);
+            transform.GetChild(0).gameObject.SetActive(false);
+        }
     }
 
 }

@@ -121,9 +121,9 @@ MonoBehaviour:
   - {fileID: 0}
   Lock: {fileID: 1433806495201752334, guid: bdaac601cc90941e28ad0f61ae8bc1f2, type: 3}
   LockClone: {fileID: 0}
-  IceBlue: {fileID: 2100000, guid: e4e329cdf385f4585ab0fee6ea291cf5, type: 2}
-  origmat: {fileID: 2100000, guid: f354a42db5c061d44801a216dfb0c5e6, type: 2}
+  SheepIce: {fileID: 21300000, guid: ba66a83d247204fca945d09ba5bcdeae, type: 3}
   P2S: {fileID: 0}
+  SkyBrikker: {fileID: 0}
 --- !u!212 &1367632317
 SpriteRenderer:
   m_ObjectHideFlags: 0
