@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Control : MonoBehaviour
 {
@@ -26,7 +27,6 @@ public class Control : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
 
     }
 
