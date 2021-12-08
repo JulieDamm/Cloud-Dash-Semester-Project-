@@ -121,8 +121,7 @@ MonoBehaviour:
   - {fileID: 0}
   Lock: {fileID: 1433806495201752334, guid: bdaac601cc90941e28ad0f61ae8bc1f2, type: 3}
   LockClone: {fileID: 0}
-  IceBlue: {fileID: 2100000, guid: e4e329cdf385f4585ab0fee6ea291cf5, type: 2}
-  origmat: {fileID: 2100000, guid: e40fdaff2955f4247ae196e3caf327da, type: 2}
+  MarshmallowIce: {fileID: 21300000, guid: eb79a916f346c4658a1d9772fc95a9da, type: 3}
   P1S: {fileID: 0}
 --- !u!212 &803311824
 SpriteRenderer:

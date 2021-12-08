@@ -178,22 +178,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sky (17)
       objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.x
-      value: 1.827693
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.z
-      value: 0.1708058
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
 --- !u!4 &18810156 stripped
@@ -506,10 +490,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sky (32)
       objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
 --- !u!1001 &149591619
@@ -566,10 +546,6 @@ PrefabInstance:
     - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
       propertyPath: m_Name
       value: Sky (45)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
@@ -794,22 +770,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sky (13)
       objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.x
-      value: 1.827693
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.z
-      value: 0.1708058
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
 --- !u!1 &198885689
@@ -902,10 +862,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sky (44)
       objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
 --- !u!1001 &221252894
@@ -962,10 +918,6 @@ PrefabInstance:
     - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
       propertyPath: m_Name
       value: Sky (54)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
@@ -1323,22 +1275,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sky (23)
       objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.x
-      value: 1.827693
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.z
-      value: 0.1708058
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
 --- !u!4 &281805699 stripped
@@ -1400,22 +1336,6 @@ PrefabInstance:
     - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
       propertyPath: m_Name
       value: Sky (24)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.x
-      value: 1.827693
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.z
-      value: 0.1708058
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Material
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
@@ -1579,10 +1499,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sky (52)
       objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
 --- !u!4 &347526933 stripped
@@ -1654,10 +1570,6 @@ PrefabInstance:
     - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
       propertyPath: m_Name
       value: Sky (42)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
@@ -1801,10 +1713,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sky (61)
       objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
 --- !u!1001 &459414667
@@ -1861,26 +1769,6 @@ PrefabInstance:
     - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
       propertyPath: m_Name
       value: Sky (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306830, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.x
-      value: 1.827693
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.z
-      value: 0.1708058
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Material
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
@@ -1944,22 +1832,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sky (14)
       objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.x
-      value: 1.827693
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.z
-      value: 0.1708058
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
 --- !u!4 &487246670 stripped
@@ -2021,10 +1893,6 @@ PrefabInstance:
     - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
       propertyPath: m_Name
       value: Sky (33)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
@@ -2118,10 +1986,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sky (53)
       objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
 --- !u!1 &540195604
@@ -2208,10 +2072,6 @@ PrefabInstance:
     - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
       propertyPath: m_Name
       value: Sky (46)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
@@ -2337,22 +2197,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sky (20)
       objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.x
-      value: 1.827693
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.z
-      value: 0.1708058
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
 --- !u!114 &589260135 stripped
@@ -2436,14 +2280,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sky (21)
       objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
 --- !u!1001 &671368306
@@ -2500,10 +2336,6 @@ PrefabInstance:
     - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
       propertyPath: m_Name
       value: Sky (27)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
@@ -2781,10 +2613,6 @@ PrefabInstance:
     - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
       propertyPath: m_Name
       value: Sky (49)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
@@ -3188,10 +3016,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sky (31)
       objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
 --- !u!1 &818208653
@@ -3309,22 +3133,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sky (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.x
-      value: 1.827693
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.z
-      value: 0.1708058
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
 --- !u!4 &849801293 stripped
@@ -3386,10 +3194,6 @@ PrefabInstance:
     - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
       propertyPath: m_Name
       value: Sky (56)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
@@ -3568,10 +3372,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sky (55)
       objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
-      objectReference: {fileID: 0}
+    - target: {fileID: 7566687098370166690, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
+      propertyPath: pO
+      value: 
+      objectReference: {fileID: 1946337801}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
 --- !u!1 &896280866
@@ -3688,10 +3492,6 @@ PrefabInstance:
     - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
       propertyPath: m_Name
       value: Sky (8)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
       objectReference: {fileID: 0}
     - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
       propertyPath: m_Material
@@ -4161,10 +3961,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sky (47)
       objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
 --- !u!1 &979993399
@@ -4335,10 +4131,6 @@ PrefabInstance:
     - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
       propertyPath: m_Name
       value: Sky (58)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
@@ -4626,10 +4418,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sky (48)
       objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
 --- !u!1001 &1098227694
@@ -4686,10 +4474,6 @@ PrefabInstance:
     - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
       propertyPath: m_Name
       value: Sky (35)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
@@ -4748,10 +4532,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sky (29)
       objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
 --- !u!1001 &1118025196
@@ -4809,22 +4589,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sky (6)
       objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.x
-      value: 1.827693
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.z
-      value: 0.1708058
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
 --- !u!1001 &1119018562
@@ -4881,22 +4645,6 @@ PrefabInstance:
     - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
       propertyPath: m_Name
       value: Sky (18)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.x
-      value: 1.827693
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.z
-      value: 0.1708058
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Material
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
@@ -4959,10 +4707,6 @@ PrefabInstance:
     - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
       propertyPath: m_Name
       value: Sky (51)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
@@ -5115,10 +4859,6 @@ PrefabInstance:
     - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
       propertyPath: m_Name
       value: Sky (36)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
@@ -5304,10 +5044,6 @@ PrefabInstance:
     - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
       propertyPath: m_Name
       value: Sky (60)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
@@ -5660,10 +5396,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sky (25)
       objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
 --- !u!4 &1279018288 stripped
@@ -5756,10 +5488,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sky (59)
       objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
 --- !u!1 &1299752414
@@ -5846,22 +5574,6 @@ PrefabInstance:
     - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
       propertyPath: m_Name
       value: Sky (16)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.x
-      value: 1.827693
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.z
-      value: 0.1708058
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Material
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
@@ -5979,10 +5691,6 @@ PrefabInstance:
     - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
       propertyPath: m_Name
       value: Sky (57)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
@@ -6136,10 +5844,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sky (39)
       objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
 --- !u!4 &1394226265 stripped
@@ -6202,10 +5906,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sky (40)
       objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
 --- !u!1001 &1424529535
@@ -6262,22 +5962,6 @@ PrefabInstance:
     - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
       propertyPath: m_Name
       value: Sky (12)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.x
-      value: 1.827693
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.z
-      value: 0.1708058
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Material
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
@@ -6340,22 +6024,6 @@ PrefabInstance:
     - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
       propertyPath: m_Name
       value: Sky (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.x
-      value: 1.827693
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.z
-      value: 0.1708058
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Material
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
@@ -6768,22 +6436,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sky (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.x
-      value: 1.827693
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.z
-      value: 0.1708058
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
 --- !u!1 &1592600181
@@ -6892,8 +6544,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e75c97f5b9b0ed42bf7ede6c9830d2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  red: {fileID: 0}
-  blue: {fileID: 0}
   originalmat: {fileID: 0}
   Synlig: {fileID: 0}
   blueCloud: {fileID: 0}
@@ -6901,6 +6551,8 @@ MonoBehaviour:
   whiteCloud: {fileID: 0}
   platRes: 0.5
   platFall: 1
+  CloudBurst: {fileID: 0}
+  pO: {fileID: 0}
 --- !u!1 &1611500630
 GameObject:
   m_ObjectHideFlags: 0
@@ -7180,10 +6832,6 @@ PrefabInstance:
     - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
       propertyPath: m_Name
       value: Sky (50)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
@@ -7540,26 +7188,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sky (7)
       objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306830, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.x
-      value: 1.827693
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.z
-      value: 0.1708058
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
 --- !u!1 &1705271033
@@ -7603,6 +7231,10 @@ PrefabInstance:
       propertyPath: P2S
       value: 
       objectReference: {fileID: 589260135}
+    - target: {fileID: 1780659109, guid: 3c80bc961aeff8640bbcb5f6a52a74aa, type: 3}
+      propertyPath: SkyBrikker
+      value: 
+      objectReference: {fileID: 1592600181}
     - target: {fileID: 1780659109, guid: 3c80bc961aeff8640bbcb5f6a52a74aa, type: 3}
       propertyPath: Player1Count
       value: 
@@ -7773,10 +7405,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sky (43)
       objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
 --- !u!4 &1753511114 stripped
@@ -7838,22 +7466,6 @@ PrefabInstance:
     - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
       propertyPath: m_Name
       value: Sky (10)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.x
-      value: 1.827693
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.z
-      value: 0.1708058
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Material
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
@@ -8038,10 +7650,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sky (28)
       objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
 --- !u!4 &1777369790 stripped
@@ -8104,22 +7712,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sky (11)
       objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.x
-      value: 1.827693
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.z
-      value: 0.1708058
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
 --- !u!1001 &1816167574
@@ -8176,10 +7768,6 @@ PrefabInstance:
     - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
       propertyPath: m_Name
       value: Sky (41)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Material
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
@@ -8242,22 +7830,6 @@ PrefabInstance:
     - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
       propertyPath: m_Name
       value: Sky (15)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.x
-      value: 1.827693
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.z
-      value: 0.1708058
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Material
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
@@ -8628,10 +8200,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sky (34)
       objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
 --- !u!1 &1876579935
@@ -8719,10 +8287,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sky (37)
       objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
 --- !u!1001 &1889610556
@@ -8779,10 +8343,6 @@ PrefabInstance:
     - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
       propertyPath: m_Name
       value: Sky (62)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
@@ -8871,10 +8431,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sky (26)
       objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
 --- !u!1001 &1932999162
@@ -8931,10 +8487,6 @@ PrefabInstance:
     - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
       propertyPath: m_Name
       value: Sky (30)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
@@ -9023,22 +8575,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sky (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.x
-      value: 1.827693
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.z
-      value: 0.1708058
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
 --- !u!114 &1946337801 stripped
@@ -9117,22 +8653,6 @@ PrefabInstance:
     - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
       propertyPath: m_Name
       value: Sky (19)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.x
-      value: 1.827693
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.z
-      value: 0.1708058
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Material
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
@@ -9604,10 +9124,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sky (38)
       objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
 --- !u!4 &2057330558 stripped
@@ -9896,38 +9412,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sky (22)
       objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.x
-      value: 1.8275455
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.y
-      value: 1.95
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.z
-      value: 0.17
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Center.x
-      value: -0.02806609
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Center.y
-      value: -0.006823109
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Center.z
-      value: 0.013
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
 --- !u!1001 &2138656315
@@ -9984,22 +9468,6 @@ PrefabInstance:
     - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
       propertyPath: m_Name
       value: Sky (9)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306829, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_TagString
-      value: Sky
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.x
-      value: 1.827693
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Size.z
-      value: 0.1708058
-      objectReference: {fileID: 0}
-    - target: {fileID: 2709701777240306831, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
-      propertyPath: m_Material
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}

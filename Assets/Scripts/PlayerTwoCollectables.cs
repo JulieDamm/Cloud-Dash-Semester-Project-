@@ -28,8 +28,7 @@ public class PlayerTwoCollectables : MonoBehaviour
     public Transform[] BlueTornadoSpawnPoints;
     public GameObject Lock;
     public GameObject LockClone;
-    public Material IceBlue;
-    public Material origmat;
+    public Sprite MarshmallowIce;
     public Player1Skills P1S;
 
     // Start is called before the first frame update
@@ -77,7 +76,7 @@ public class PlayerTwoCollectables : MonoBehaviour
 
     void SetPlayerTwoWinText()
     {
-        Player2WinText.text = "Player 2 Wins! <br> <size=24>Press 'R' to Restart</size>";
+        Player2WinText.text = "<color=blue>Blue Player</color> Wins! <br> <size=24>Press 'R' to Restart</size>";
     }
 
     // Update is called once per frame
@@ -165,7 +164,8 @@ public class PlayerTwoCollectables : MonoBehaviour
         {
             Destroy(other.gameObject);
             FindObjectOfType<AudioManager>().Play("Ice");
-            GameObject.Find("Player1").GetComponent<Renderer>().material = IceBlue;
+            GameObject.Find("Player1").GetComponent<Animator>().enabled = false;
+            GameObject.Find("Player1").GetComponent<SpriteRenderer>().sprite = MarshmallowIce;
             P1S.RandomSkill1 = 20;
             StartCoroutine(Defrost());
         }
@@ -174,7 +174,7 @@ public class PlayerTwoCollectables : MonoBehaviour
     IEnumerator Defrost()
     {
         yield return new WaitForSeconds(5f);
-        GameObject.Find("Player1").GetComponent<Renderer>().material = origmat;
+        GameObject.Find("Player1").GetComponent<Animator>().enabled = true;
         P1S.RandomSkill1 = P1S.OriSkill1;
     }
 }

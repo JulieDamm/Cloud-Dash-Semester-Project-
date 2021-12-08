@@ -31,6 +31,7 @@ public class StartGame : MonoBehaviour
             startText.enabled = false;
             GameObject.Find("Player1").GetComponent<Control>().enabled = true;
             GameObject.Find("Player2").GetComponent<Control>().enabled = true;
+            this.enabled = false;
             //gameStarting = false;
         }
     }
