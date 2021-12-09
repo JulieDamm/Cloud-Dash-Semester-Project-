@@ -20,6 +20,7 @@ public class PlayerOneCollectables : MonoBehaviour
     public Image[] coins;
     public Sprite fullCoin;
     public Sprite emptyCoin;
+    public Image PlayerOneWinscreen;
     private SpriteRenderer spriteR;
 
     public Collider CoinCollider;
@@ -44,6 +45,8 @@ public class PlayerOneCollectables : MonoBehaviour
         SetPlayerOneTotalText();
 
         gameWon = false;
+
+        PlayerOneWinscreen.enabled = false;
     }
 
     public void SetPlayerOneCountText()
@@ -82,7 +85,10 @@ public class PlayerOneCollectables : MonoBehaviour
 
     void SetPlayerOneWinText()
     {
-        Player1WinText.text = "<color=red>Red Player</color> Wins! <br> <size=24>Press 'R' to Restart</size>";
+
+        //Player1WinText.text = "<color=red>Red Player</color> Wins! <br> <size=24>Press 'R' to Restart</size>";
+        Player1WinText.text = "<size=24> Press 'R' to Restart</size>";
+        PlayerOneWinscreen.enabled = true;
     }
 
     // Update is called once per frame
@@ -197,6 +203,7 @@ public class PlayerOneCollectables : MonoBehaviour
         }
         GameObject Spawn2 = GameObject.Find("Spawn 2");
         Destroy(Spawn2);
+        GameObject.Find("Player2").GetComponent<Animator>().SetBool("Kinematic", true);
         yield return new WaitForSeconds(2f);
         GameObject.Find("Player2").GetComponent<Rigidbody>().isKinematic = false;
         yield return new WaitForSeconds(1.9f);

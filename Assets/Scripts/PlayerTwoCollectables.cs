@@ -20,6 +20,7 @@ public class PlayerTwoCollectables : MonoBehaviour
     public Image[] coins;
     public Sprite fullCoin;
     public Sprite emptyCoin;
+    public Image PlayerTwoWinscreen;
 
     public Collider CoinCollider;
 
@@ -31,6 +32,8 @@ public class PlayerTwoCollectables : MonoBehaviour
     public Sprite MarshmallowIce;
     public Player1Skills P1S;
 
+    public GameObject SkyBrikker;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +44,8 @@ public class PlayerTwoCollectables : MonoBehaviour
         SetPlayerTwoTotalText();
 
         gameWon = false;
+
+        PlayerTwoWinscreen.enabled = false;
     }
 
     public void SetPlayerTwoCountText()
@@ -76,7 +81,9 @@ public class PlayerTwoCollectables : MonoBehaviour
 
     void SetPlayerTwoWinText()
     {
-        Player2WinText.text = "<color=blue>Blue Player</color> Wins! <br> <size=24>Press 'R' to Restart</size>";
+        //Player2WinText.text = "<color=red>Blue Player</color> Wins! <br> <size=24>Press 'R' to Restart</size>";
+        Player2WinText.text = "<size=24> Press 'R' to Restart</size>";
+        PlayerTwoWinscreen.enabled = true;
     }
 
     // Update is called once per frame
@@ -108,12 +115,7 @@ public class PlayerTwoCollectables : MonoBehaviour
 
             if (playerTwoTotal >= 10)
             {
-                SetPlayerTwoWinText();
-                GetComponent<Control>().enabled = false;
-                GameObject.Find("Player1").GetComponent<Control>().enabled = false;
-                gameWon = true;
-
-                FindObjectOfType<AudioManager>().Play("Player2Win");
+                StartCoroutine(PlayerTwoWin());
             }
         }
     }
@@ -176,5 +178,28 @@ public class PlayerTwoCollectables : MonoBehaviour
         yield return new WaitForSeconds(5f);
         GameObject.Find("Player1").GetComponent<Animator>().enabled = true;
         P1S.RandomSkill1 = P1S.OriSkill1;
+    }
+
+    IEnumerator PlayerTwoWin()
+    {
+        FindObjectOfType<AudioManager>().Play("Player2Win");
+        GetComponent<Control>().enabled = false;
+        GameObject.Find("Player1").GetComponent<Control>().enabled = false;
+        gameWon = true;
+        GameObject.Find("Player1").GetComponent<Rigidbody>().isKinematic = true;
+        yield return new WaitForSeconds(1.5f);
+        foreach (Transform child in SkyBrikker.transform)
+        {
+            Destroy(child.gameObject);
+        }
+        GameObject Spawn1 = GameObject.Find("Spawn 1");
+        Destroy(Spawn1);
+        GameObject.Find("Player1").GetComponent<Animator>().SetBool("Kinematic", true);
+        yield return new WaitForSeconds(2f);
+        GameObject.Find("Player1").GetComponent<Rigidbody>().isKinematic = false;
+        yield return new WaitForSeconds(1.9f);
+        GameObject Player1 = GameObject.Find("Player1");
+        Destroy(Player1);
+        SetPlayerTwoWinText();
     }
 }

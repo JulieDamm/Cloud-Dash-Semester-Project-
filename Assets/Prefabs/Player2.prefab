@@ -108,6 +108,7 @@ MonoBehaviour:
   - {fileID: 0}
   fullCoin: {fileID: 21300000, guid: 711b204dba7d24946a939c9ad6728327, type: 3}
   emptyCoin: {fileID: 21300000, guid: d5dd7a474c2e748d8afc82e5adbbccb8, type: 3}
+  PlayerTwoWinscreen: {fileID: 0}
   CoinCollider: {fileID: 0}
   BlueTornado: {fileID: 5480896860386596168, guid: 128f8077cae4044f5b0de4ff8b91f45c, type: 3}
   BlueTornadoClone: {fileID: 0}
@@ -123,6 +124,7 @@ MonoBehaviour:
   LockClone: {fileID: 0}
   MarshmallowIce: {fileID: 21300000, guid: eb79a916f346c4658a1d9772fc95a9da, type: 3}
   P1S: {fileID: 0}
+  SkyBrikker: {fileID: 0}
 --- !u!212 &803311824
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -216,3 +218,11 @@ MonoBehaviour:
   JumpForce: 10
   C: {fileID: 1786253585750956279}
   P1S: {fileID: 0}
+  DashReady2: {fileID: 0}
+  DashDown2: {fileID: 0}
+  PushReady2: {fileID: 0}
+  PushDown2: {fileID: 0}
+  JumpReady2: {fileID: 0}
+  JumpDown2: {fileID: 0}
+  TeleportReady2: {fileID: 0}
+  TeleportDown2: {fileID: 0}
