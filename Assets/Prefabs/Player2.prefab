@@ -216,3 +216,11 @@ MonoBehaviour:
   JumpForce: 10
   C: {fileID: 1786253585750956279}
   P1S: {fileID: 0}
+  DashReady2: {fileID: 0}
+  DashDown2: {fileID: 0}
+  PushReady2: {fileID: 0}
+  PushDown2: {fileID: 0}
+  JumpReady2: {fileID: 0}
+  JumpDown2: {fileID: 0}
+  TeleportReady2: {fileID: 0}
+  TeleportDown2: {fileID: 0}
