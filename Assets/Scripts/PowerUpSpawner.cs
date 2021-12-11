@@ -10,6 +10,9 @@ public class PowerUpSpawner : MonoBehaviour
 
     private List<Transform> possiblelocations;
 
+    public PlayerOneCollectables pO;
+    public PlayerTwoCollectables pT;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +44,46 @@ public class PowerUpSpawner : MonoBehaviour
         else
         {
             RepopulatePossibleLocations();
+        }
+
+        if (pO.gameWon)
+        {
+            foreach (GameObject clone in GameObject.FindGameObjectsWithTag("TornadoPowerUp"))
+            {
+                DestroyImmediate(clone);
+            }
+
+            foreach (GameObject clone in GameObject.FindGameObjectsWithTag("LockPowerUp"))
+            {
+                DestroyImmediate(clone);
+            }
+
+            foreach (GameObject clone in GameObject.FindGameObjectsWithTag("IcePowerUp"))
+            {
+                DestroyImmediate(clone);
+            }
+
+            CancelInvoke("Spawn");
+        }
+
+        if (pT.gameWon)
+        {
+            foreach (GameObject clone in GameObject.FindGameObjectsWithTag("TornadoPowerUp"))
+            {
+                DestroyImmediate(clone);
+            }
+
+            foreach (GameObject clone in GameObject.FindGameObjectsWithTag("LockPowerUp"))
+            {
+                DestroyImmediate(clone);
+            }
+
+            foreach (GameObject clone in GameObject.FindGameObjectsWithTag("IcePowerUp"))
+            {
+                DestroyImmediate(clone);
+            }
+
+            CancelInvoke("Spawn");
         }
     }
 }

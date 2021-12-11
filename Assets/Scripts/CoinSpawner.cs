@@ -13,6 +13,8 @@ public class CoinSpawner : MonoBehaviour
     public PlayerOneCollectables pO;
     public PlayerTwoCollectables pT;
 
+    private GameObject[] clones;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,8 @@ public class CoinSpawner : MonoBehaviour
         /* Run the Spawn function after a delay of the spawnTime and then
            continue to run it after the  same amount of time. */
         InvokeRepeating("Spawn", spawnTime, spawnTime);
+
+        clones = GameObject.FindGameObjectsWithTag("Collectable");
     }
 
     private void RepopulatePossibleLocations()
@@ -54,11 +58,21 @@ public class CoinSpawner : MonoBehaviour
 
         if (pO.gameWon)
         {
+            foreach (GameObject clone in GameObject.FindGameObjectsWithTag("Collectable"))
+            {
+                Destroy(clone);
+            }
+
             CancelInvoke("Spawn");
         }
 
         if (pT.gameWon)
         {
+            foreach (GameObject clone in GameObject.FindGameObjectsWithTag("Collectable"))
+            {
+                Destroy(clone);
+            }
+
             CancelInvoke("Spawn");
         }
     }

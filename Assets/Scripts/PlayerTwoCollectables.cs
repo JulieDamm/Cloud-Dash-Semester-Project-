@@ -33,6 +33,8 @@ public class PlayerTwoCollectables : MonoBehaviour
     public Player1Skills P1S;
 
     public GameObject SkyBrikker;
+    public Animator animator;
+    public Sprite WinSprite;
 
     // Start is called before the first frame update
     void Start()
@@ -113,7 +115,7 @@ public class PlayerTwoCollectables : MonoBehaviour
             SetPlayerTwoCountText();
             SetPlayerTwoTotalText();
 
-            if (playerTwoTotal >= 10)
+            if (playerTwoTotal >= 30)
             {
                 StartCoroutine(PlayerTwoWin());
             }
@@ -184,8 +186,11 @@ public class PlayerTwoCollectables : MonoBehaviour
     {
         FindObjectOfType<AudioManager>().Play("Player2Win");
         GetComponent<Control>().enabled = false;
+        GetComponent<Animator>().enabled = false;
+        //GameObject.Find("Player1").GetComponent<Animator>().enabled = false;
         GameObject.Find("Player1").GetComponent<Control>().enabled = false;
         gameWon = true;
+        GetComponent<SpriteRenderer>().sprite = WinSprite;
         GameObject.Find("Player1").GetComponent<Rigidbody>().isKinematic = true;
         yield return new WaitForSeconds(1.5f);
         foreach (Transform child in SkyBrikker.transform)
