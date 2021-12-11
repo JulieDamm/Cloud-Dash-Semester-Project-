@@ -33,6 +33,7 @@ public class Tutorial : MonoBehaviour
         {
             GameObject.Find("Player1").GetComponent<Control>().enabled = false;
             GameObject.Find("Player2").GetComponent<Control>().enabled = false;
+            GameObject.Find("TutorialManager").GetComponent<CoinSpawner>().enabled = false;
             if (Input.GetKeyDown(KeyCode.Y))
             {
                 popUpIndex++;
@@ -54,7 +55,11 @@ public class Tutorial : MonoBehaviour
         }
         else if (popUpIndex == 2)
         {
-
+            GameObject.Find("TutorialManager").GetComponent<CoinSpawner>().enabled = true;
+            if (Input.GetKeyDown(KeyCode.Y))
+            {
+                popUpIndex++;
+            }
         }
     }
 }

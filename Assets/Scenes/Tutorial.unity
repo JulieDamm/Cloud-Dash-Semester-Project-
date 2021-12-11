@@ -410,6 +410,7 @@ GameObject:
   - component: {fileID: 221153289}
   - component: {fileID: 221153290}
   - component: {fileID: 221153291}
+  - component: {fileID: 221153292}
   m_Layer: 0
   m_Name: TutorialManager
   m_TagString: Untagged
@@ -481,6 +482,44 @@ MonoBehaviour:
   - {fileID: 1379540197}
   - {fileID: 462837120}
   - {fileID: 2136640316}
+--- !u!114 &221153292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221153288}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f90676b2a03034a0fbeb9cbd49eee4aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Coin: {fileID: 4057546269708511371, guid: f37db575e1b0849a5b2371fd048c28a0, type: 3}
+  spawnTime: 1
+  SpawnLocations:
+  - {fileID: 411284085}
+  - {fileID: 243744931}
+  - {fileID: 692485668}
+  - {fileID: 891357785}
+  - {fileID: 1075964223}
+  - {fileID: 619593041}
+  - {fileID: 1041133297}
+  - {fileID: 939452709}
+  - {fileID: 426438922}
+  - {fileID: 314158833}
+  - {fileID: 204615072}
+  - {fileID: 1684500660}
+  - {fileID: 1826822570}
+  - {fileID: 1698445608}
+  - {fileID: 1608265932}
+  - {fileID: 1855348852}
+  - {fileID: 992420649}
+  - {fileID: 363000375}
+  - {fileID: 248099963}
+  - {fileID: 1901599912}
+  - {fileID: 1186759159}
+  pO: {fileID: 0}
+  pT: {fileID: 0}
 --- !u!114 &229311745 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7566687098370166690, guid: cdb375bbb00b2ec4598b39afb50be3cd, type: 3}
@@ -982,7 +1021,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'To Win, you must collect 10 coins and deliver them to your home cloud. '
+  m_text: "To Win, you must collect 10 coins and deliver them to your home cloud.
+    \n\nProceed: press \"Y\""
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1009,8 +1049,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2400,7 +2440,10 @@ MonoBehaviour:
 
 
     The Blue Player can move
-    on W,A,S,D'
+    on W,A,S,D
+
+
+    Proceed: press "Y"'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2427,8 +2470,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
