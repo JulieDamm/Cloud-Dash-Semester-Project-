@@ -110,7 +110,8 @@ MonoBehaviour:
   emptyCoin: {fileID: 21300000, guid: d5dd7a474c2e748d8afc82e5adbbccb8, type: 3}
   PlayerTwoWinscreen: {fileID: 0}
   CoinCollider: {fileID: 0}
-  BlueTornado: {fileID: 5480896860386596168, guid: 128f8077cae4044f5b0de4ff8b91f45c, type: 3}
+  BlueTornado: {fileID: 5480896860386596168, guid: 128f8077cae4044f5b0de4ff8b91f45c,
+    type: 3}
   BlueTornadoClone: {fileID: 0}
   BlueTornadoSpawnPoints:
   - {fileID: 0}
@@ -167,7 +168,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3148427037773509700, guid: 179a835f5c1cd4b6fb20f2c2c49e9b2d, type: 3}
+  m_Sprite: {fileID: 3148427037773509700, guid: 179a835f5c1cd4b6fb20f2c2c49e9b2d,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
