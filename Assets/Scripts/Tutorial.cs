@@ -34,6 +34,11 @@ public class Tutorial : MonoBehaviour
             GameObject.Find("Player1").GetComponent<Control>().enabled = false;
             GameObject.Find("Player2").GetComponent<Control>().enabled = false;
             GameObject.Find("TutorialManager").GetComponent<CoinSpawner>().enabled = false;
+            foreach (ResetTrigger script in SkyRespawnList)
+            {
+                script.GetComponent<ResetTrigger>().enabled = false;
+                script.GetComponentInChildren<ParticleSystem>().Stop();
+            }
             if (Input.GetKeyDown(KeyCode.Y))
             {
                 popUpIndex++;
@@ -41,11 +46,7 @@ public class Tutorial : MonoBehaviour
         }
         else if (popUpIndex == 1)
         {
-            foreach (ResetTrigger script in SkyRespawnList)
-            {
-                script.GetComponent<ResetTrigger>().enabled = false;
-                script.GetComponentInChildren<ParticleSystem>().Stop();
-            }
+            
             GameObject.Find("Player1").GetComponent<Control>().enabled = true;
             GameObject.Find("Player2").GetComponent<Control>().enabled = true;
             if (Input.GetKeyDown(KeyCode.Y))

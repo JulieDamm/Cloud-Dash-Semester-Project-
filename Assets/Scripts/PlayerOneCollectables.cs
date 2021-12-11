@@ -107,12 +107,12 @@ public class PlayerOneCollectables : MonoBehaviour
         if (collision.gameObject.CompareTag("RedHome"))
         {
        
-                //Spiller lyd naar spiller har coin. SKAL vaere over PlayerTotal Addition
-                if (playerOneCurrentCount >= 1)
+          //Spiller lyd naar spiller har coin. SKAL vaere over PlayerTotal Addition
+         if (playerOneCurrentCount >= 1)
 
-                {
-                    FindObjectOfType<AudioManager>().Play("Coindrop");
-                }
+         {
+          FindObjectOfType<AudioManager>().Play("Coindrop");
+         }
 
             playerOneTotal = playerOneTotal + playerOneCurrentCount;
 
@@ -136,6 +136,7 @@ public class PlayerOneCollectables : MonoBehaviour
             if (playerOneCount <= 4)
             {
                 Destroy(other.gameObject);
+                FindObjectOfType<AudioManager>().Play("Coin");
                 playerOneCount = playerOneCount + 1;
                 playerOneCurrentCount = playerOneCount;
 

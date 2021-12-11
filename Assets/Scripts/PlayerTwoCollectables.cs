@@ -129,6 +129,7 @@ public class PlayerTwoCollectables : MonoBehaviour
             if (playerTwoCount <= 4)
             {
                 Destroy(other.gameObject);
+                FindObjectOfType<AudioManager>().Play("Coin");
                 playerTwoCount = playerTwoCount + 1;
                 playerTwoCurrentCount = playerTwoCount;
 

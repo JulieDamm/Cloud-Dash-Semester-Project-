@@ -28,6 +28,7 @@ public class StartGame : MonoBehaviour
         GameObject.Find("Player2").GetComponent<Control>().enabled = false;
         if (countdown < 0)
         {
+            FindObjectOfType<AudioManager>().Play("Fight");
             startText.enabled = false;
             GameObject.Find("Player1").GetComponent<Control>().enabled = true;
             GameObject.Find("Player2").GetComponent<Control>().enabled = true;
