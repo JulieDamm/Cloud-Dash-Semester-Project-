@@ -5672,7 +5672,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Tornado
     clip: {fileID: 8300000, guid: 74b8b0b96f03c534197cf29f78f9a1c5, type: 3}
-    volume: 1
+    volume: 0.679
     pitch: 1.3
     loop: 0
     hasCooldown: 0
@@ -5680,7 +5680,7 @@ MonoBehaviour:
   - name: Walk
     clip: {fileID: 8300000, guid: 912b3ef52a344c64986d85ec716cc0d6, type: 3}
     volume: 0.036
-    pitch: 1.65
+    pitch: 1.62
     loop: 1
     hasCooldown: 1
     source: {fileID: 0}
@@ -5722,7 +5722,7 @@ MonoBehaviour:
   - name: Walk2
     clip: {fileID: 8300000, guid: 706ce219bdbead8498fa821d64d603d6, type: 3}
     volume: 0.309
-    pitch: 1.21
+    pitch: 1.78
     loop: 1
     hasCooldown: 1
     source: {fileID: 0}
