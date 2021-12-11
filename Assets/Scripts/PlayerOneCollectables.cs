@@ -139,6 +139,7 @@ public class PlayerOneCollectables : MonoBehaviour
                 FindObjectOfType<AudioManager>().Play("Coin");
                 playerOneCount = playerOneCount + 1;
                 playerOneCurrentCount = playerOneCount;
+                Debug.Log(playerOneCount);
 
                 SetPlayerOneCountText();
             }
