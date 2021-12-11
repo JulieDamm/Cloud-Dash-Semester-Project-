@@ -125,6 +125,8 @@ MonoBehaviour:
   SheepIce: {fileID: 21300000, guid: ba66a83d247204fca945d09ba5bcdeae, type: 3}
   P2S: {fileID: 0}
   SkyBrikker: {fileID: 0}
+  animator: {fileID: 3924864649054154525}
+  WinSprite: {fileID: 21300000, guid: 95a12678affb84fa7ab19c895427a987, type: 3}
 --- !u!212 &1367632317
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -125,6 +125,8 @@ MonoBehaviour:
   MarshmallowIce: {fileID: 21300000, guid: eb79a916f346c4658a1d9772fc95a9da, type: 3}
   P1S: {fileID: 0}
   SkyBrikker: {fileID: 0}
+  animator: {fileID: 803311823}
+  WinSprite: {fileID: 21300000, guid: 3cdbddc170e6d4aadb1477c3b737edf8, type: 3}
 --- !u!212 &803311824
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -165,7 +167,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -666281401051352624, guid: 3bcf3c24ef9d24dab9c78eae4bdf9548, type: 3}
+  m_Sprite: {fileID: 3148427037773509700, guid: 179a835f5c1cd4b6fb20f2c2c49e9b2d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
