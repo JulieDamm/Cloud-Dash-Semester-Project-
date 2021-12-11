@@ -83,6 +83,7 @@ public class Control : MonoBehaviour
 
         if (other.gameObject.tag == "Respawn")
         {
+            FindObjectOfType<AudioManager>().Play("Again");
             gameObject.transform.position = playerOriPos;
         }
     }
