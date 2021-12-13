@@ -16,6 +16,13 @@ public class Tutorial : MonoBehaviour
             script.GetComponent<TutResetSky>().enabled = false;
             script.GetComponentInChildren<ParticleSystem>().Stop();
         }
+        
+    }
+
+    private void Awake()
+    {
+        GameObject.Find("Player1").GetComponent<TutPlayer1Skills>().enabled = false;
+        GameObject.Find("Player2").GetComponent<TutPlayer2Skills>().enabled = false;
     }
 
     // Update is called once per frame
@@ -72,8 +79,8 @@ public class Tutorial : MonoBehaviour
         }
         else if (popUpIndex == 4)
         {
-            GameObject.Find("Player1").GetComponent<Player1Skills>().enabled = true;
-            GameObject.Find("Player2").GetComponent<Player2Skills>().enabled = true;
+            GameObject.Find("Player1").GetComponent<TutPlayer1Skills>().enabled = true;
+            GameObject.Find("Player2").GetComponent<TutPlayer2Skills>().enabled = true;
             if (Input.GetKeyDown(KeyCode.Y))
             {
                 popUpIndex++;

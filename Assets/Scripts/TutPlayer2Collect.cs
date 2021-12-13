@@ -25,7 +25,7 @@ public class TutPlayer2Collect : MonoBehaviour
     public GameObject Lock;
     public GameObject LockClone;
     public Sprite MarshmallowIce;
-    public Player1Skills P1S;
+    public TutPlayer1Skills P1S;
     // Start is called before the first frame update
     void Start()
     {
