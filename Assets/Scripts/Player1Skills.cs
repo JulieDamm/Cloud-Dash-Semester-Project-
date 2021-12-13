@@ -112,6 +112,7 @@ public class Player1Skills : MonoBehaviour
                 if (Input.GetKey("l"))
                 {
                     rb.AddForce(movement * DashSpeed, ForceMode.Impulse);
+                    FindObjectOfType<AudioManager>().Play("Speed");
                     DashReady1.SetActive(false);
                     DashDown1.SetActive(true);
                     StartCoroutine(CD1());
@@ -130,6 +131,7 @@ public class Player1Skills : MonoBehaviour
                 if (Input.GetKey("l"))
                 {
                     rb.AddForce(movement * PushSpeed, ForceMode.Impulse);
+                    FindObjectOfType<AudioManager>().Play("Hit");
                     PushReady1.SetActive(false);
                     PushDown1.SetActive(true);
                     StartCoroutine(CD1());
@@ -151,6 +153,7 @@ public class Player1Skills : MonoBehaviour
                 if (Input.GetKey("l"))
                 {
                     rb.AddForce(Jump * JumpForce, ForceMode.VelocityChange);
+                    FindObjectOfType<AudioManager>().Play("Jump");
                     JumpReady1.SetActive(false);
                     JumpDown1.SetActive(true);
                     StartCoroutine(CD1());
@@ -170,7 +173,7 @@ public class Player1Skills : MonoBehaviour
 
                 {
                     C.speed = 0;
-                    
+                    FindObjectOfType<AudioManager>().Play("Transport");
                     sr.enabled = false;
                     cc.enabled = false;
                     TeleportReady1.SetActive(false);
