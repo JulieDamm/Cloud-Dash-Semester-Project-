@@ -18,6 +18,14 @@ public class TutPlayer2Collect : MonoBehaviour
     public Image[] coins;
 
     private SpriteRenderer spriteR;
+
+    public GameObject BlueTornado;
+    public GameObject BlueTornadoClone;
+    public Transform[] BlueTornadoSpawnPoints;
+    public GameObject Lock;
+    public GameObject LockClone;
+    public Sprite MarshmallowIce;
+    public Player1Skills P1S;
     // Start is called before the first frame update
     void Start()
     {
@@ -101,6 +109,38 @@ public class TutPlayer2Collect : MonoBehaviour
             playerTwoCount = 0;
             playerTwoCurrentCount = 0;
         }
+
+        if (other.gameObject.CompareTag("TornadoPowerUp"))
+        {
+            Destroy(other.gameObject);
+            int blueTornadoSpawnPointIndex = Random.Range(0, BlueTornadoSpawnPoints.Length);
+            BlueTornadoClone = Instantiate(BlueTornado, BlueTornadoSpawnPoints[blueTornadoSpawnPointIndex].position, transform.rotation * Quaternion.Euler(90f, 0f, 0f));
+            
+        }
+
+        if (other.gameObject.CompareTag("LockPowerUp"))
+        {
+            Destroy(other.gameObject);
+            LockClone = Instantiate(Lock, new Vector3(12.5f, 0.1f, 0f), transform.rotation * Quaternion.Euler(90f, 0f, 0f));
+            
+        }
+
+        if (other.gameObject.CompareTag("IcePowerUp"))
+        {
+            Destroy(other.gameObject);
+            
+            GameObject.Find("Player1").GetComponent<Animator>().enabled = false;
+            GameObject.Find("Player1").GetComponent<SpriteRenderer>().sprite = MarshmallowIce;
+            P1S.RandomSkill1 = 20;
+            StartCoroutine(Defrost());
+        }
+    }
+
+    IEnumerator Defrost()
+    {
+        yield return new WaitForSeconds(5f);
+        GameObject.Find("Player1").GetComponent<Animator>().enabled = true;
+        P1S.RandomSkill1 = P1S.OriSkill1;
     }
     // Update is called once per frame
     void Update()

@@ -6,12 +6,16 @@ public class Tutorial : MonoBehaviour
 {
     public GameObject[] popUps;
     private int popUpIndex;
-    public ResetTrigger[] SkyRespawnList;
+    public TutResetSky[] SkyRespawnList;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        foreach (TutResetSky script in SkyRespawnList)
+        {
+            script.GetComponent<TutResetSky>().enabled = false;
+            script.GetComponentInChildren<ParticleSystem>().Stop();
+        }
     }
 
     // Update is called once per frame
@@ -34,11 +38,7 @@ public class Tutorial : MonoBehaviour
             GameObject.Find("Player1").GetComponent<Control>().enabled = false;
             GameObject.Find("Player2").GetComponent<Control>().enabled = false;
             GameObject.Find("TutorialManager").GetComponent<CoinSpawner>().enabled = false;
-            foreach (ResetTrigger script in SkyRespawnList)
-            {
-                script.GetComponent<ResetTrigger>().enabled = false;
-                script.GetComponentInChildren<ParticleSystem>().Stop();
-            }
+            
             if (Input.GetKeyDown(KeyCode.Y))
             {
                 popUpIndex++;
@@ -57,6 +57,35 @@ public class Tutorial : MonoBehaviour
         else if (popUpIndex == 2)
         {
             GameObject.Find("TutorialManager").GetComponent<CoinSpawner>().enabled = true;
+            if (Input.GetKeyDown(KeyCode.Y))
+            {
+                popUpIndex++;
+            }
+        }
+        else if (popUpIndex == 3)
+        {
+            GameObject.Find("TutorialManager").GetComponent<PowerUpSpawner>().enabled = true;
+            if (Input.GetKeyDown(KeyCode.Y))
+            {
+                popUpIndex++;
+            }
+        }
+        else if (popUpIndex == 4)
+        {
+            GameObject.Find("Player1").GetComponent<Player1Skills>().enabled = true;
+            GameObject.Find("Player2").GetComponent<Player2Skills>().enabled = true;
+            if (Input.GetKeyDown(KeyCode.Y))
+            {
+                popUpIndex++;
+            }
+        }
+        else if (popUpIndex == 5)
+        {
+            foreach (TutResetSky script in SkyRespawnList)
+            {
+                script.GetComponent<TutResetSky>().enabled = true;
+                
+            }
             if (Input.GetKeyDown(KeyCode.Y))
             {
                 popUpIndex++;
