@@ -121,7 +121,7 @@ public class TutPlayer2Collect : MonoBehaviour
         if (other.gameObject.CompareTag("LockPowerUp"))
         {
             Destroy(other.gameObject);
-            LockClone = Instantiate(Lock, new Vector3(12.5f, 0.1f, 0f), transform.rotation * Quaternion.Euler(90f, 0f, 0f));
+            LockClone = Instantiate(Lock, new Vector3(9.9f, 0.1f, 0f), transform.rotation * Quaternion.Euler(90f, 0f, 0f));
             
         }
 
