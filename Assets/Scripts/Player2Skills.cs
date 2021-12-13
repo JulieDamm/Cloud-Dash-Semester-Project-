@@ -117,6 +117,7 @@ public class Player2Skills : MonoBehaviour
                 if (Input.GetKey(KeyCode.Space))
                 {
                     rb.AddForce(movement * DashSpeed, ForceMode.Impulse);
+                    FindObjectOfType<AudioManager>().Play("Speed");
                     DashReady2.SetActive(false);
                     DashDown2.SetActive(true);
                     StartCoroutine(CD2());
@@ -134,6 +135,7 @@ public class Player2Skills : MonoBehaviour
                 if (Input.GetKey(KeyCode.Space))
                 {
                     rb.AddForce(movement * PushSpeed, ForceMode.Impulse);
+                    FindObjectOfType<AudioManager>().Play("Hit");
                     NextFireTime = Time.time + CoolDownTime;
                     PushReady2.SetActive(false);
                     PushDown2.SetActive(true);
@@ -155,6 +157,7 @@ public class Player2Skills : MonoBehaviour
                 if (Input.GetKey(KeyCode.Space))
                 {
                     rb.AddForce(Jump * JumpForce, ForceMode.VelocityChange);
+                    FindObjectOfType<AudioManager>().Play("Jump");
                     JumpReady2.SetActive(false);
                     JumpDown2.SetActive(true);
                     StartCoroutine(CD2());
@@ -172,7 +175,7 @@ public class Player2Skills : MonoBehaviour
                 if (Input.GetKey(KeyCode.Space))
                 {
                     C.speed = 0;
-
+                    FindObjectOfType<AudioManager>().Play("Transport");
                     sr.enabled = false;
                     cc.enabled = false;
                     TeleportReady2.SetActive(false);
