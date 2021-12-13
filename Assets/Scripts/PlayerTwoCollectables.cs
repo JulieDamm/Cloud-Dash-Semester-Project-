@@ -36,6 +36,8 @@ public class PlayerTwoCollectables : MonoBehaviour
     public Animator animator;
     public Sprite WinSprite;
 
+    private int RandomSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,6 +50,10 @@ public class PlayerTwoCollectables : MonoBehaviour
         gameWon = false;
 
         PlayerTwoWinscreen.enabled = false;
+
+        RandomSound = Random.Range(1, 5);
+
+        var PlayRandom = RandomSound;
     }
 
     public void SetPlayerTwoCountText()
@@ -207,5 +213,27 @@ public class PlayerTwoCollectables : MonoBehaviour
         GameObject Player1 = GameObject.Find("Player1");
         Destroy(Player1);
         SetPlayerTwoWinText();
+
+        FindObjectOfType<AudioManager>().Stop("Theme");
+
+        if (RandomSound == 1)
+        {
+            FindObjectOfType<AudioManager>().Play("Win1");
+        }
+
+        if (RandomSound == 2)
+        {
+            FindObjectOfType<AudioManager>().Play("Win2");
+        }
+
+        if (RandomSound == 3)
+        {
+            FindObjectOfType<AudioManager>().Play("Win3");
+        }
+
+        if (RandomSound == 4)
+        {
+            FindObjectOfType<AudioManager>().Play("Win4");
+        }
     }
 }

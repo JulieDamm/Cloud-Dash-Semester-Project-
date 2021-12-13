@@ -38,7 +38,7 @@ public class ResetTrigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
 
     //N?r en "Player" rammer objektet starter Fall funktionen
@@ -70,6 +70,7 @@ public class ResetTrigger : MonoBehaviour
         spriteRenderer.enabled = false;
         yield return new WaitForSeconds(0.3f);
         transform.GetChild(0).gameObject.SetActive(false);
+        FindObjectOfType<AudioManager>().Play("Puff");
         //Synlig.enabled = false;
         yield return new WaitForSeconds(platRes);
         //gameObject.transform.position = originalPos;
@@ -79,6 +80,7 @@ public class ResetTrigger : MonoBehaviour
         GetComponent<SpriteRenderer>().sprite = whiteCloud;
         spriteRenderer.enabled = true;
         transform.GetChild(0).gameObject.SetActive(true);
+        FindObjectOfType<AudioManager>().Play("Puff");
         yield return new WaitForSeconds(2f);
         transform.GetChild(0).gameObject.SetActive(false);
     }
@@ -99,6 +101,8 @@ public class ResetTrigger : MonoBehaviour
         yield return new WaitForSeconds(2f);
         transform.GetChild(0).gameObject.SetActive(false);
     }
+
+    
 
     //N?r vores platform rammer en collider med tag "Respawn" s? starter Platformres funktionen.
     void OnTriggerEnter(Collider other)
