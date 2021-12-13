@@ -151,8 +151,7 @@ PlayerSettings:
   resolutionScalingMode: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
-  applicationIdentifier:
-    Standalone: com.DefaultCompany.CloudDashSemesterProject
+  applicationIdentifier: {Standalone: com.DefaultCompany.CloudDashSemesterProject}
   buildNumber:
     Standalone: 0
     iPhone: 0
