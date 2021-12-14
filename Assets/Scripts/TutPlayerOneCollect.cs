@@ -26,7 +26,7 @@ public class TutPlayerOneCollect : MonoBehaviour
     public GameObject Lock;
     public GameObject LockClone;
     public Sprite SheepIce;
-    public Player2Skills P2S;
+    public TutPlayer2Skills P2S;
     // Start is called before the first frame update
     void Start()
     {
