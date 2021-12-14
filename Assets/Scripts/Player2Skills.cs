@@ -47,6 +47,15 @@ public class Player2Skills : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         cc = GetComponent<CapsuleCollider>();
 
+        DashReady2.SetActive(false);
+        PushReady2.SetActive(false);
+        JumpReady2.SetActive(false);
+        TeleportReady2.SetActive(false);
+        DashDown2.SetActive(false);
+        PushDown2.SetActive(false);
+        JumpDown2.SetActive(false);
+        TeleportDown2.SetActive(false);
+
         RandomSkill2 = Random.Range(1, 5);
         OriSkill2 = RandomSkill2;
 
@@ -59,16 +68,6 @@ public class Player2Skills : MonoBehaviour
         {
             rb.mass = 1.5f;
         }
-
-
-        DashReady2.SetActive(false);
-        PushReady2.SetActive(false);
-        JumpReady2.SetActive(false);
-        TeleportReady2.SetActive(false);
-        DashDown2.SetActive(false);
-        PushDown2.SetActive(false);
-        JumpDown2.SetActive(false);
-        TeleportDown2.SetActive(false);
 
         if (RandomSkill2 == 1)
         {
@@ -87,6 +86,7 @@ public class Player2Skills : MonoBehaviour
             TeleportReady2.SetActive(true);
         }
 
+
     }
 
     // Update is called once per frame
@@ -94,8 +94,42 @@ public class Player2Skills : MonoBehaviour
     {
         if (P1S.RandomSkill1 == RandomSkill2)
         {
+            DashReady2.SetActive(false);
+            PushReady2.SetActive(false);
+            JumpReady2.SetActive(false);
+            TeleportReady2.SetActive(false);
+            DashDown2.SetActive(false);
+            PushDown2.SetActive(false);
+            JumpDown2.SetActive(false);
+            TeleportDown2.SetActive(false);
             RandomSkill2 = Random.Range(1, 5);
             OriSkill2 = RandomSkill2;
+            
+
+            StartCoroutine(CDTEXT());
+
+            
+        }
+    }
+
+    IEnumerator CDTEXT()
+    {
+        yield return new WaitForSeconds(0.1f);
+        if (RandomSkill2 == 1)
+        {
+            DashReady2.SetActive(true);
+        }
+        if (RandomSkill2 == 2)
+        {
+            PushReady2.SetActive(true);
+        }
+        if (RandomSkill2 == 3)
+        {
+            JumpReady2.SetActive(true);
+        }
+        if (RandomSkill2 == 4)
+        {
+            TeleportReady2.SetActive(true);
         }
     }
 

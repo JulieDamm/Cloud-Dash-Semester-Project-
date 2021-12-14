@@ -103,4 +103,12 @@ public class AudioManager : MonoBehaviour
 
         return true;
     }
-   }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            FindObjectOfType<AudioManager>().Stop("Theme");
+        }
+    }
+}

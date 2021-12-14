@@ -20,6 +20,7 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         SceneManager.LoadScene("SampleScene");
+        FindObjectOfType<AudioManager>().Play("Theme");
     }
 
     public void TutorialGame()

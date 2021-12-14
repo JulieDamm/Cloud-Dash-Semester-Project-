@@ -17,6 +17,7 @@ public class ReturnMenu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             SceneManager.LoadScene("Menu");
+            GameObject.Find("AudioManager").GetComponent<AudioManager>().enabled = false;
         }
     }
 }
